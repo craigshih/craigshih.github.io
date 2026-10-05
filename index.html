@@ -225,7 +225,7 @@ footer{background:var(--ink);color:#6E757E;font-size:13px;padding:0 0 40px}
 
 <div class="metrics">
   <div class="wrap">
-    <div class="metric"><div class="n">7<span>件</span></div><div class="k">深度案例</div></div>
+    <div class="metric"><div class="n">8<span>件</span></div><div class="k">深度案例</div></div>
     <div class="metric"><div class="n">3<span>年1個月</span></div><div class="k">實習與合作年資</div></div>
     <div class="metric"><div class="n">65<span>萬+</span></div><div class="k">單支影音最高觀看</div></div>
     <div class="metric"><div class="n">200<span>人</span></div><div class="k">自辦專案報名人數</div></div>
@@ -236,7 +236,7 @@ footer{background:var(--ink);color:#6E757E;font-size:13px;padding:0 0 40px}
 <section id="work">
   <div class="wrap">
     <div class="shead"><h2>精選作品</h2><span class="en">SELECTED WORK</span></div>
-    <p class="sintro">七個案例，橫跨跨境電商、金融科技、公關策略、音樂賽事與廣播媒體。每一件都寫了當時面對的問題、我實際做的事，以及可以驗證的成果。</p>
+    <p class="sintro">八個案例，橫跨跨境電商、金融科技、公關策略、音樂賽事、廣播媒體與 AI 應用。每一件都寫了當時面對的問題、我實際做的事，以及可以驗證的成果。</p>
     <div class="cards">
       <a class="card" href="#cs01">
         <div class="ci"><img src="assets/img/speak-amazon.jpg" alt="亞馬遜校園說明會現場"></div>
@@ -279,6 +279,12 @@ footer{background:var(--ink);color:#6E757E;font-size:13px;padding:0 0 40px}
         <p class="ck">內容創作 × 節目製作</p>
         <h3>想見鬼想見鬼想見鬼</h3>
         <p class="cr">節目共同創立・藝美獎入圍</p>
+      </a>
+      <a class="card" href="#cs08">
+        <div class="ci"><img src="assets/img/financehub-home.jpg" alt="Craig 財經站首頁：今日觀察標的"></div>
+        <p class="ck">AI 協作 × 產品開發</p>
+        <h3>Craig 財經站</h3>
+        <p class="cr">4 個自動化專案整合・每日自動更新</p>
       </a>
     </div>
   </div>
@@ -602,6 +608,48 @@ footer{background:var(--ink);color:#6E757E;font-size:13px;padding:0 0 40px}
         <figure><img class="shot doc" src="assets/img/radio-nominee.jpg" alt="藝美獎最佳綜合節目入圍名單"><figcaption>藝美獎最佳綜合節目入圍</figcaption></figure>
         <figure><img class="shot doc" src="assets/img/radio-cert2.jpg" alt="最佳雙人主持獎獎狀"><figcaption>最佳雙人/多人主持獎</figcaption></figure>
         <figure><img class="shot doc" src="assets/img/radio-cert.jpg" alt="傳播學院服務證書"><figcaption>傳播學院服務證書</figcaption></figure>
+      </div>
+    </article>
+
+    <!-- ===== 案例 08 ===== -->
+    <article class="case" id="cs08">
+      <p class="case-num">案例 08 — AI 協作 × 產品開發</p>
+      <h3>Craig 財經站：用 AI 把四個自動化專案整合成一個平台</h3>
+      <p class="case-meta">個人專案｜產品規劃、需求定義、驗收；程式由 AI（Claude Code）撰寫｜2026.09 – 2026.10</p>
+
+      <div class="block">
+        <h4>挑戰</h4>
+        <p>我陸續在 GitHub 寫了幾個財經自動化程式：每天早上寄來的總經新聞摘要、每週的台美股基本面研究、券商對帳單整理、Notion 記帳的股價更新。它們各自運作、各自寄信，資訊散在四個地方。我想要一個入口，打開就能看到今天該知道的事，也能放心分享給朋友，而不暴露自己的持股。</p>
+      </div>
+
+      <div class="block">
+        <h4>我做的事</h4>
+        <ul>
+          <li>以產品負責人的角色和 AI 協作：定義每一頁要解決的問題、決定架構與取捨，<b>程式由 AI 撰寫，我負責驗收與修正方向</b>。</li>
+          <li>把四個專案的輸出整合成一個網站，每天由 GitHub Actions 自動重建、部署到 Cloudflare，<b>不需要自己維護伺服器</b>。</li>
+          <li>設計「今日觀察」：依法人資金流與產業趨勢的透明規則，每天篩出台股、美股各一檔，再由四個模擬研究角色從資金、趨勢、估值、風險四個角度撰寫觀點，並刻意定位成研究素材，不做買賣建議。</li>
+          <li>把 Notion 記帳和券商對帳單自動逐檔核對，15 個月的成交紀錄算出的持股和 Notion 完全一致。</li>
+          <li>處理分享時的隱私：網站以 email 驗證碼登入，個人投資頁再加一道伺服器端密碼；另外做了讓朋友用虛擬資金互相比賽的模擬交易。</li>
+          <li>前後依使用體驗改版：把十萬字的研究報告改成表格與卡片、加入走勢小圖、即時新聞與動畫，讓人一眼抓到重點。</li>
+        </ul>
+      </div>
+
+      <div class="outcome">
+        <div><div class="n">4<span>個</span></div><div class="k">原本分散的<br>自動化專案整合</div></div>
+        <div><div class="n">6<span>頁</span></div><div class="k">總覽・即時快報・投資<br>總經・研究・模擬交易</div></div>
+        <div><div class="n">15<span>個月</span></div><div class="k">券商對帳單<br>自動核對</div></div>
+        <div><div class="n">0<span>元</span></div><div class="k">伺服器費用<br>（全用免費方案）</div></div>
+      </div>
+
+      <div class="block">
+        <h4>學到什麼</h4>
+        <p>AI 能寫程式，但「要做什麼、做到什麼程度、哪裡不能妥協」還是人要決定。這個專案裡最關鍵的幾個判斷都不是技術問題：投資頁要不要上鎖、每日標的該叫「推薦」還是「觀察」、對帳發現 123 筆不一致時，要先懷疑資料還是懷疑程式。把需求講清楚、每一步都驗收，是和 AI 協作最重要的能力。</p>
+      </div>
+
+      <div class="strip">
+        <figure><img class="shot" src="assets/img/financehub-home.jpg" alt="總覽頁：今日觀察標的與四位模擬角色觀點"><figcaption>今日觀察：資金流規則篩選＋四種研究角度</figcaption></figure>
+        <figure><img class="shot" src="assets/img/financehub-weekly.jpg" alt="每週研究：全市場篩選漏斗"><figcaption>每週研究：全市場篩選漏斗</figcaption></figure>
+        <figure><img class="shot" src="assets/img/financehub-news.jpg" alt="即時快報：依產業關鍵字分類的新聞"><figcaption>即時快報：依產業自動分類</figcaption></figure>
       </div>
     </article>
 
