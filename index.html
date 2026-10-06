@@ -1,842 +1,385 @@
 <!DOCTYPE html>
-<html lang="zh-Hant">
+<html lang="zh-Hant" class="no-js">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>施宥丞 Craig Shih｜作品集</title>
-<meta name="description" content="施宥丞 Craig Shih 的個人作品集。六個案例，從亞馬遜跨境電商的社群成長與校園專案，到金融科技新創的市場開拓與廣播節目製作。">
-<meta property="og:title" content="施宥丞 Craig Shih｜作品集">
-<meta property="og:description" content="傳播 × 科技 × 商業。六個親手做出來的專案。">
-<meta property="og:image" content="assets/img/portrait.jpg">
+<meta name="description" content="施宥丞 Craig Shih 的作品集：八個親手從零做到上線的專案，橫跨跨境電商、金融科技、公關策略、音樂賽事、廣播與 AI 產品開發。">
+<link rel="canonical" href="https://craigshih.github.io/">
+<meta name="theme-color" content="#F2F1EE" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0E0F11" media="(prefers-color-scheme: dark)">
 <meta property="og:type" content="website">
+<meta property="og:locale" content="zh_TW">
+<meta property="og:title" content="施宥丞 Craig Shih｜作品集">
+<meta property="og:description" content="施宥丞 Craig Shih 的作品集：八個親手從零做到上線的專案，橫跨跨境電商、金融科技、公關策略、音樂賽事、廣播與 AI 產品開發。">
+<meta property="og:url" content="https://craigshih.github.io/">
+<meta property="og:image" content="https://craigshih.github.io/assets/img/og.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23B23A2B'/%3E%3Ctext x='32' y='45' font-size='36' text-anchor='middle' fill='white' font-family='sans-serif' font-weight='700'%3E%E6%96%BD%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&family=Noto+Serif+TC:wght@500;700;900&display=swap" rel="stylesheet">
-<style>
-:root{
-  --ink:#15181D; --ink-2:#565D66; --ink-3:#8A9099;
-  --paper:#FFFFFF; --band:#EDEFEA; --seal:#B23A2B; --rule:#D9DBD4;
-  --serif:"Noto Serif TC","Songti TC",serif;
-  --sans:"Noto Sans TC",system-ui,-apple-system,"Helvetica Neue",sans-serif;
-  --wrap:1000px;
-}
-*{box-sizing:border-box}
-html{scroll-behavior:smooth; scroll-padding-top:70px}
-body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);
-  font-size:16.5px;line-height:1.85;-webkit-font-smoothing:antialiased;text-underline-offset:3px}
-img{max-width:100%;display:block}
-a{color:var(--ink);text-decoration-color:var(--seal)}
-a:focus-visible,button:focus-visible{outline:2px solid var(--seal);outline-offset:3px}
-.wrap{max-width:var(--wrap);margin:0 auto;padding:0 26px}
-
-/* 導覽 */
-.topbar{position:sticky;top:0;z-index:40;background:rgba(255,255,255,.94);
-  backdrop-filter:blur(8px);border-bottom:1px solid var(--rule)}
-.topbar .wrap{display:flex;align-items:center;gap:22px;height:56px}
-.topbar .me{font-family:var(--serif);font-weight:700;letter-spacing:.06em;margin-right:auto}
-.topbar nav{display:flex;gap:20px;font-size:14.5px}
-.topbar nav a{color:var(--ink-2);text-decoration:none;padding:4px 0;border-bottom:1.5px solid transparent}
-.topbar nav a:hover{color:var(--ink);border-bottom-color:var(--seal)}
-@media(max-width:780px){.topbar nav{display:none}}
-
-/* Hero */
-.hero{padding:80px 0 64px}
-.hero .wrap{display:grid;grid-template-columns:1fr 340px;gap:56px;align-items:end}
-.namewrap{display:flex;align-items:flex-start;gap:16px}
-.name{font-family:var(--serif);font-weight:900;font-size:clamp(44px,7.6vw,74px);
-  line-height:1.02;letter-spacing:.04em;margin:0}
-.seal{flex:none;width:44px;height:44px;margin-top:9px;background:var(--seal);color:#fff;
-  border-radius:3px;font-family:var(--serif);font-weight:700;font-size:25px;display:grid;place-items:center}
-.latin{font-family:var(--serif);font-weight:500;color:var(--ink-2);letter-spacing:.14em;font-size:16px;margin:13px 0 0}
-.tagline{font-family:var(--serif);font-weight:700;font-size:clamp(19px,2.5vw,25px);
-  line-height:1.65;margin:26px 0 0;max-width:22em}
-.hero .sub{color:var(--ink-2);margin:14px 0 0;max-width:30em;font-size:15.5px}
-.availability{display:inline-flex;align-items:center;gap:8px;margin-top:22px;font-size:13.5px;
-  color:var(--ink-2);border:1px solid var(--rule);border-radius:99px;padding:5px 14px}
-.availability::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--seal)}
-.portrait{position:relative}
-.portrait img{width:100%;contrast(1.06);border:1px solid var(--rule)}
-@media(max-width:1020px){.hero .wrap{grid-template-columns:1fr 290px;gap:44px}}
-@media(max-width:780px){.hero{padding:48px 0 40px}.hero .wrap{grid-template-columns:1fr;gap:30px}.portrait{max-width:240px}}
-
-/* 數字帶 */
-.metrics{background:var(--band);border-top:1px solid var(--rule);border-bottom:1px solid var(--rule)}
-.metrics .wrap{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;padding:0}
-.metric{padding:30px 24px;background:var(--band)}
-.metric .n{font-family:var(--serif);font-weight:900;font-size:clamp(27px,4.2vw,38px);line-height:1.1}
-.metric .n span{font-size:.55em;font-weight:700;margin-left:2px}
-.metric .k{font-size:13.5px;color:var(--ink-2);margin-top:8px;line-height:1.6}
-.metric+.metric{box-shadow:-1px 0 0 var(--rule)}
-@media(max-width:760px){.metrics .wrap{grid-template-columns:1fr 1fr}.metric{padding:22px 18px}
-  .metric:nth-child(n+3){box-shadow:0 -1px 0 var(--rule)}
-  .metric:nth-child(2){box-shadow:-1px 0 0 var(--rule)}
-  .metric:nth-child(4){box-shadow:-1px 0 0 var(--rule),0 -1px 0 var(--rule)}}
-
-/* 區塊 */
-section{padding:76px 0}
-section+section{border-top:1px solid var(--rule)}
-.shead{display:flex;align-items:baseline;gap:14px;margin-bottom:14px}
-.shead h2{font-family:var(--serif);font-weight:900;font-size:27px;letter-spacing:.06em;margin:0}
-.shead .en{font-size:12.5px;color:var(--ink-3);letter-spacing:.18em;font-family:var(--serif)}
-.shead::after{content:"";flex:1;height:1px;background:var(--rule)}
-.sintro{color:var(--ink-2);max-width:34em;margin:0 0 42px;font-size:15.5px}
-.lede{font-size:17px;max-width:34em;margin:0 0 18px}
-.lede strong{font-weight:700;box-shadow:inset 0 -.5em 0 rgba(178,58,43,.13)}
-
-/* 作品卡片 */
-.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:34px 26px}
-.card{text-decoration:none;display:block}
-.card .ci{overflow:hidden;background:var(--band);border:1px solid var(--rule)}
-.card img{width:100%;aspect-ratio:3/2;object-fit:cover;object-position:center top;
-  transition:transform .55s cubic-bezier(.2,.7,.3,1)}
-.card:hover img{transform:scale(1.045)}
-.card:hover .ci{border-color:var(--ink)}
-.card .ck{font-size:11.5px;letter-spacing:.14em;color:var(--seal);margin:14px 0 5px;font-weight:700}
-.card h3{font-family:var(--serif);font-weight:700;font-size:18px;margin:0 0 6px;line-height:1.5}
-.card .cr{font-size:13.5px;color:var(--ink-2);margin:0}
-@media(max-width:860px){.cards{grid-template-columns:repeat(2,1fr);gap:28px 20px}}
-@media(max-width:540px){.cards{grid-template-columns:1fr}}
-
-/* 案例 */
-.case{padding:72px 0;border-top:1px solid var(--rule)}
-.case:first-of-type{border-top:none;padding-top:8px}
-.case-num{font-family:var(--serif);font-weight:900;font-size:13px;letter-spacing:.2em;color:var(--seal);margin:0 0 10px}
-.case h3{font-family:var(--serif);font-weight:900;font-size:clamp(23px,3.2vw,31px);
-  line-height:1.4;margin:0 0 12px;letter-spacing:.02em;max-width:20em}
-.case-meta{font-size:14px;color:var(--ink-2);margin:0 0 34px;padding-bottom:20px;border-bottom:1px solid var(--rule)}
-.block{margin-bottom:28px}
-.block h4{font-family:var(--serif);font-weight:700;font-size:14px;letter-spacing:.12em;
-  color:var(--ink-3);margin:0 0 10px}
-.block p{margin:0;max-width:38em}
-.block ul{margin:0;padding-left:1.15em;max-width:38em}
-.block li{margin-bottom:9px}
-.block li b{font-weight:700;box-shadow:inset 0 -.5em 0 rgba(178,58,43,.13)}
-.golink{display:inline-flex;align-items:center;gap:6px;font-size:13.5px;font-weight:700;
-  color:var(--seal);text-decoration:none;border-bottom:1.5px solid var(--seal);
-  padding-bottom:2px;margin-right:22px}
-.golink:hover{color:var(--ink);border-bottom-color:var(--ink)}
-.golinks{margin:0 0 28px}
-.outcome{display:grid;grid-template-columns:repeat(4,1fr);gap:22px;
-  border-top:2px solid var(--ink);border-bottom:1px solid var(--rule);padding:22px 0;margin:34px 0}
-.outcome .n{font-family:var(--serif);font-weight:900;font-size:clamp(22px,3vw,30px);line-height:1.15}
-.outcome .n span{font-size:.55em;margin-left:2px}
-.outcome .k{font-size:12.5px;color:var(--ink-2);margin-top:6px;line-height:1.55}
-@media(max-width:700px){.outcome{grid-template-columns:1fr 1fr;gap:20px 18px}}
-
-/* 圖片網格 */
-.strip{display:grid;grid-template-columns:repeat(3,1fr);gap:20px 16px;margin:28px 0 0}
-.strip figure{margin:0;min-width:0}
-.strip img{width:100%;aspect-ratio:4/3;object-fit:cover;object-position:center top;
-  background:var(--band);border:1px solid var(--rule);cursor:zoom-in;
-  transition:border-color .25s ease,filter .25s ease}
-.strip img:hover{border-color:var(--ink);filter:brightness(1.04) saturate(1.05)}
-.strip img.doc{object-fit:contain;object-position:center;background:var(--band);padding:8px}
-.strip figcaption{font-size:12px;color:var(--ink-3);margin-top:9px;line-height:1.55;letter-spacing:.03em}
-.strip:has(figure:only-child) figure{grid-column:span 2}
-@media(max-width:640px){.strip{grid-template-columns:repeat(2,1fr);gap:16px 12px}}
-
-/* 其他經歷 */
-.mini{display:grid;grid-template-columns:118px 1fr;gap:0 26px;padding:24px 0;border-top:1px solid var(--rule)}
-.mini:first-of-type{border-top:none;padding-top:0}
-.mini .when{font-family:var(--serif);font-weight:700;font-size:14px;color:var(--ink-2);white-space:nowrap;padding-top:3px}
-.mini h4{font-family:var(--serif);font-weight:700;font-size:17.5px;margin:0 0 3px}
-.mini .role{color:var(--seal);font-size:13.5px;font-weight:700;margin:0 0 8px}
-.mini p{margin:0;font-size:15px;color:var(--ink-2);max-width:38em}
-@media(max-width:700px){.mini{grid-template-columns:1fr}.mini .when{padding:0 0 6px}}
-
-/* 競賽 */
-.awards{display:grid;grid-template-columns:repeat(2,1fr)}
-.award{padding:26px 28px 26px 0;border-top:1px solid var(--rule)}
-.award:nth-child(2n){padding-left:28px;box-shadow:-1px 0 0 var(--rule)}
-.award h3{font-family:var(--serif);font-weight:700;font-size:17.5px;margin:0 0 6px}
-.award .rank{font-family:var(--serif);font-weight:900;font-size:14.5px;color:var(--seal);margin:0 0 8px}
-.award p{margin:0;font-size:14.5px;color:var(--ink-2)}
-@media(max-width:700px){.awards{grid-template-columns:1fr}.award,.award:nth-child(2n){padding:22px 0;box-shadow:none}}
-
-/* 能力 */
-.certs{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:34px}
-.certgroup h3{font-family:var(--serif);font-weight:700;font-size:16px;margin:0 0 10px;
-  padding-bottom:8px;border-bottom:2px solid var(--seal);display:inline-block}
-.certgroup ul{margin:0;padding-left:1.1em;font-size:14.5px;color:var(--ink-2)}
-.certgroup li{margin-bottom:6px}
-.tags{display:flex;flex-wrap:wrap;gap:7px;margin:22px 0 0;padding:0;list-style:none}
-.tags li{font-size:12.5px;color:var(--ink-2);border:1px solid var(--rule);border-radius:2px;padding:2px 9px;line-height:1.7}
-.strip+.tags{margin-top:26px}
-
-/* 聯絡 */
-.contact{background:var(--ink);color:#fff;padding:70px 0}
-.contact .shead h2{color:#fff}
-.contact .shead::after{background:#3A3F47}
-.contact .shead .en{color:#7C838C}
-.contact p{color:#C7CBD1;max-width:32em}
-.clist{list-style:none;margin:28px 0 0;padding:0;display:flex;flex-wrap:wrap;gap:14px 36px}
-.clist a{color:#fff;font-family:var(--serif);font-weight:700;font-size:18px;
-  text-decoration:none;border-bottom:2px solid var(--seal);padding-bottom:3px}
-.clist a:hover{border-bottom-color:#fff}
-footer{background:var(--ink);color:#6E757E;font-size:13px;padding:0 0 40px}
-
-/* Lightbox */
-.lb{position:fixed;inset:0;z-index:90;background:rgba(12,14,17,.95);display:none;place-items:center;padding:28px}
-.lb[open]{display:grid}
-.lb img{max-width:min(1100px,94vw);max-height:84vh;width:auto;object-fit:contain}
-.lb .cap{color:#C7CBD1;font-size:13.5px;text-align:center;margin-top:14px}
-.lb button{position:absolute;top:18px;right:20px;background:none;border:1px solid #555;color:#fff;
-  font-size:22px;width:42px;height:42px;border-radius:50%;cursor:pointer;line-height:1}
-
-.reveal{opacity:0;transform:translateY(14px);animation:rise .7s cubic-bezier(.2,.7,.3,1) forwards}
-.reveal:nth-child(2){animation-delay:.09s}
-@keyframes rise{to{opacity:1;transform:none}}
-@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.reveal{opacity:1;transform:none;animation:none}}
-</style>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+TC:wght@400;500;700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/site.css">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Person", "name": "施宥丞", "alternateName": ["Craig Shih", "Yu Cheng Shih"], "url": "https://craigshih.github.io/", "image": "https://craigshih.github.io/assets/img/portrait.jpg", "email": "mailto:craigshih1206@gmail.com", "jobTitle": "金融科技 / 跨境電商 / 科技行銷", "alumniOf": {"@type": "CollegeOrUniversity", "name": "國立政治大學"}, "sameAs": ["https://www.linkedin.com/in/craig-shih-951121338/", "https://github.com/craigshih", "https://craig-finance.pages.dev/"]}</script>
 </head>
 <body>
-
+<a class="skip" href="#main">跳到主要內容</a>
 <header class="topbar">
   <div class="wrap">
-    <span class="me">施宥丞</span>
-    <nav>
+    <a class="brand" href="./"><span class="seal" aria-hidden="true">施</span>施宥丞 <small>Craig Shih</small></a>
+    <button class="menu-btn" aria-expanded="false" aria-controls="nav">選單</button>
+    <nav class="nav" id="nav" aria-label="主要導覽">
       <a href="#work">作品</a>
-      <a href="#more">其他經歷</a>
+      <a href="#experience">經歷</a>
       <a href="#awards">競賽</a>
       <a href="#skills">能力</a>
-      <a href="#about">關於</a>
       <a href="#contact">聯絡</a>
     </nav>
   </div>
 </header>
 
-<div class="hero">
-  <div class="wrap">
-    <div class="reveal">
-      <div class="namewrap">
-        <h1 class="name">施宥丞</h1>
-        <div class="seal" aria-hidden="true">施</div>
+<main id="main">
+
+  <!-- ===== 首屏 ===== -->
+  <section class="wrap hero">
+    <div class="bento">
+      <div class="card grad c-8 hero-main reveal">
+        <div>
+          <span class="status">尋找 金融科技 / 跨境電商 / 科技行銷 職缺</span>
+          <p class="hi">Hi，我是 <b>施宥丞 Craig</b> — 政大廣告系畢業、科智所在學</p>
+          <h1>把傳播的語言，翻譯成<em>金融科技</em>與<em>跨境電商</em>聽得懂的商業結果。</h1>
+          <p class="sub">這裡放的不是履歷條列，是我親手從零做到上線的專案：當時面對的問題、我實際做的事，以及可以驗證的成果。</p>
+        </div>
+        <div class="btns">
+          <a class="btn" href="#work">看作品</a>
+          <a class="btn ghost" href="#contact">聯絡我</a>
+        </div>
       </div>
-      <p class="latin">YU CHENG, SHIH</p>
-      <p class="tagline">把傳播的語言，翻譯成金融科技與跨境電商聽得懂的商業結果。</p>
-      <p class="sub">政大廣告系畢業、科智所在學。這裡放的不是履歷條列，是我親手從零做到上線的專案: 臨場判斷、實際產出，最後成效。</p>
-      <p class="availability">尋找 金融科技 / 跨境電商 / 科技行銷 相關職缺</p>
-    </div>
-    <div class="portrait reveal">
-      <img src="assets/img/portrait.jpg" alt="施宥丞形象照">
-    </div>
-  </div>
-</div>
+      <div class="card flush portrait c-4 reveal">
+        <img src="assets/img/portrait.webp" alt="施宥丞形象照" width="640" height="642" fetchpriority="high">
+        <p class="tag"><b>施宥丞 Yu Cheng, Shih</b>傳播 × 科技 × 商業</p>
+      </div>
 
-<div class="metrics">
-  <div class="wrap">
-    <div class="metric"><div class="n">8<span>件</span></div><div class="k">深度案例</div></div>
-    <div class="metric"><div class="n">3<span>年1個月</span></div><div class="k">實習與合作年資</div></div>
-    <div class="metric"><div class="n">65<span>萬+</span></div><div class="k">單支影音最高觀看</div></div>
-    <div class="metric"><div class="n">200<span>人</span></div><div class="k">自辦專案報名人數</div></div>
-  </div>
-</div>
-
-<!-- ===== 作品總覽 ===== -->
-<section id="work">
-  <div class="wrap">
-    <div class="shead"><h2>精選作品</h2><span class="en">SELECTED WORK</span></div>
-    <p class="sintro">八個案例，橫跨跨境電商、金融科技、公關策略、音樂賽事、廣播媒體與 AI 應用。每一件都寫了當時面對的問題、我實際做的事，以及可以驗證的成果。</p>
-    <div class="cards">
-      <a class="card" href="#cs01">
-        <div class="ci"><img src="assets/img/speak-amazon.jpg" alt="亞馬遜校園說明會現場"></div>
-        <p class="ck">專案管理 × 活動執行</p>
-        <h3>亞馬遜跨境電商人才培育計畫</h3>
-        <p class="cr">7 人團隊・200 人報名・40% 轉化</p>
+      <a class="card stat c-3 reveal" href="work/amazon-social.html">
+        <p class="label">最高觀看</p>
+        <p class="n">65<span>萬+</span></p>
+        <p class="k">單支短影音觀看</p>
+        <p class="src">亞馬遜全球開店 →</p>
       </a>
-      <a class="card" href="#cs02">
-        <div class="ci"><img src="assets/img/az-reel-2.jpg" alt="亞馬遜 IG 短影音成效"></div>
-        <p class="ck">內容成長 × 社群自動化</p>
-        <h3>亞馬遜全球開店 社群全棧運營</h3>
-        <p class="cr">觀看成長 500%+・單支 65 萬觀看</p>
+      <a class="card stat c-3 reveal" href="work/onus.html">
+        <p class="label">開信率</p>
+        <p class="n">87<span>%</span></p>
+        <p class="k">台灣市場 EDM（200+ 間企業）</p>
+        <p class="src">On-us 摩揪 →</p>
       </a>
-      <a class="card" href="#cs03">
-        <div class="ci"><img src="assets/img/onus-edm.jpg" alt="On-us 台灣市場 EDM"></div>
-        <p class="ck">市場進入 × 數位體驗</p>
-        <h3>On-us 台灣市場 0 到 1</h3>
-        <p class="cr">EDM 開信率 87%・LinkedIn 5 萬瀏覽</p>
+      <a class="card stat c-3 reveal" href="work/amazon-campus.html">
+        <p class="label">報名轉化</p>
+        <p class="n">40<span>%</span></p>
+        <p class="k">校園說明會現場註冊轉化</p>
+        <p class="src">亞馬遜人才培育計畫 →</p>
       </a>
-      <a class="card" href="#cs04">
-        <div class="ci"><img src="assets/img/dreamloan-team.jpg" alt="夢想銀號策略行銷部團隊"></div>
-        <p class="ck">內容生產 × 品牌建立</p>
-        <h3>夢想銀號 四平台社群從零建立</h3>
-        <p class="cr">百部短影音・單支破萬觀看</p>
-      </a>
-      <a class="card" href="#cs05">
-        <div class="ci"><img src="assets/img/adgo-team.jpg" alt="艾思智創 ADGo 專案團隊"></div>
-        <p class="ck">公關策略 × 金融科技</p>
-        <h3>布爾喬亞 金融科技客戶策略</h3>
-        <p class="cr">銀行・虛擬貨幣交易所・AI 新創</p>
-      </a>
-      <a class="card" href="#cs06">
-        <div class="ci"><img src="assets/img/bm7-stage.jpg" alt="Bm7 詞曲創作大賽決賽現場"></div>
-        <p class="ck">賽事企劃 × 贊助洽談</p>
-        <h3>Bm7 詞曲創作大賽</h3>
-        <p class="cr">8 間贊助・40 組參賽・2.7 萬觸及</p>
-      </a>
-      <a class="card" href="#cs07">
-        <div class="ci"><img src="assets/img/radio-team.jpg" alt="政大之聲廣播電台獲獎"></div>
-        <p class="ck">內容創作 × 節目製作</p>
-        <h3>想見鬼想見鬼想見鬼</h3>
-        <p class="cr">節目共同創立・藝美獎入圍</p>
-      </a>
-      <a class="card" href="#cs08">
-        <div class="ci"><img src="assets/img/financehub-home.jpg" alt="Craig 財經站首頁：今日觀察標的"></div>
-        <p class="ck">AI 協作 × 產品開發</p>
-        <h3>Craig 財經站</h3>
-        <p class="cr">4 個自動化專案整合・每日自動更新</p>
-      </a>
-    </div>
-  </div>
-</section>
-
-<!-- ===== 案例 01 ===== -->
-<section style="padding-top:20px">
-  <div class="wrap">
-
-    <article class="case" id="cs01">
-      <p class="case-num">案例 01 — 專案管理 × 活動執行</p>
-      <h3>亞馬遜跨境電商人才培育計畫說明會</h3>
-      <p class="case-meta">Amazon Global Selling｜7 人團隊統籌、專案整體策劃｜2025 秋</p>
-
-      <div class="block">
-        <h4>挑戰</h4>
-        <p>亞馬遜想在台灣校園找到跨境電商人才，但學生對「跨境電商」的想像多半停在代購。我們要在一個半月內，從構思做到落地一場能真正轉化的校園活動——而且必須說服校方職涯中心與各院系願意合作。</p>
+      <div class="card stat c-3 reveal">
+        <p class="label">實戰年資</p>
+        <p class="n">3<span>年1個月</span></p>
+        <p class="k">實習與合作年資</p>
+        <p class="src">金融科技・電商・公關・媒體</p>
       </div>
 
-      <div class="block">
-        <h4>我做的事</h4>
-        <ul>
-          <li>聯合其他 6 位 T-Ambassador 組建核心執行團隊，負責專案<b>整體策劃與全流程推進</b>。</li>
-          <li>與校方職涯中心及 <b>12 個院系</b>逐一對接洽談，打通校園社群、官微、系所公告、社團聯動的多渠道宣發。</li>
-          <li>把 CEPT 認證課程體系與亞馬遜平台實戰場景融入活動設計，讓學生不只是聽講座，而是拿得到可驗證的能力。</li>
-          <li>結合自身政大校友資源找到講師，設計「校園講座 + 企業導師一對一輔導」兩大板塊。</li>
-          <li>同期牽頭 9/24 賣家加速器 Pitch Day 與 10/29 跨境電商高峰會的現場執行與社群內容產出。</li>
+      <article class="card inv c-7 feature reveal">
+        <div>
+          <p class="kicker">最新專案 · AI 協作 × 產品開發</p>
+          <h3>Craig 財經站</h3>
+          <p class="muted" style="margin-top:10px">把四個財經自動化專案整合成一個每日自動更新的網站：總經新聞、台美股研究、持股對帳與模擬交易。我負責產品規劃與驗收，程式由 AI 撰寫。</p>
+        </div>
+        <a class="shot-frame" href="https://craig-finance.pages.dev/" target="_blank" rel="noopener"><img src="assets/img/financehub-home.webp" alt="Craig 財經站首頁截圖" width="1400" height="1291" loading="lazy" decoding="async"></a>
+        <div>
+          <div class="btns">
+            <a class="btn" href="https://craig-finance.pages.dev/" target="_blank" rel="noopener">前往網站 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a>
+            <a class="btn ghost" href="work/finance-hub.html">看案例</a>
+          </div>
+          <p class="note muted">網站以 email 驗證碼登入。</p>
+        </div>
+      </article>
+
+      <div class="card c-5 reveal" style="display:flex;flex-direction:column;gap:18px">
+        <p class="label">關於我 About</p>
+        <p style="font-size:17px;font-weight:500;line-height:1.8">我的起點是廣告與廣播——研究人怎麼被說服、怎麼被打動。後來發現，<b>真正難的是讓一個聽不懂技術的市場，願意相信一個新的金融或電商產品。</b></p>
+        <p class="muted small">於是我一路往科技與商業靠：在金融科技新創經營社群、為銀行與虛擬貨幣交易所做公關策略、替香港 FinTech 打開台灣市場、在亞馬遜做跨境電商的內容與營運。同時自學 Google Cloud、生成式 AI、區塊鏈與 Python 補足技術底子。</p>
+        <ul class="chips" style="margin-top:auto">
+          <li>政大 廣告系（2025 畢業）</li>
+          <li>外交系 輔系</li>
+          <li>政大 科智所（在學）</li>
+          <li>TOEIC 895</li>
+          <li>IELTS 7.0</li>
         </ul>
-      </div>
-
-      <div class="outcome">
-        <div><div class="n">200<span>+</span></div><div class="k">報名人數<br>（全校 10+ 院系）</div></div>
-        <div><div class="n">40<span>%</span></div><div class="k">現場課程<br>轉化註冊率</div></div>
-        <div><div class="n">9.2<span>/10</span></div><div class="k">專案滿意度<br>（150+ 份回饋）</div></div>
-        <div><div class="n">1.5<span>個月</span></div><div class="k">從構思到落地<br>全週期</div></div>
-      </div>
-
-      <div class="block">
-        <h4>學到什麼</h4>
-        <p>校園活動最難的不是辦，是「讓人願意來」。我們最後把重點放在轉化——與其追求人數，不如確保來的人願意走進下一步。40% 的註冊轉化率是這個判斷換來的。</p>
-      </div>
-
-      <div class="strip">
-        <figure><img class="shot doc" src="assets/img/amazon-poster.jpg" alt="說明會主視覺海報"><figcaption>專案主視覺與報名設計</figcaption></figure>
-        <figure><img class="shot" src="assets/img/speak-amazon.jpg" alt="說明會現場主持"><figcaption>說明會現場主持</figcaption></figure>
-        <figure><img class="shot" src="assets/img/amazon-pitchday.jpg" alt="亞馬遜新銳品牌加速器 Pitch Day"><figcaption>賣家加速器 Pitch Day</figcaption></figure>
-        <figure><img class="shot" src="assets/img/amazon-summit.jpg" alt="Amazon Seller Summit 2025"><figcaption>跨境電商高峰會（600+ 人）</figcaption></figure>
-      </div>
-    </article>
-
-    <!-- ===== 案例 02 ===== -->
-    <article class="case" id="cs02">
-      <p class="case-num">案例 02 — 內容成長 × 社群自動化</p>
-      <h3>亞馬遜全球開店 社群全棧運營</h3>
-      <p class="case-meta">Amazon Global Selling｜Marketing 部門・跨境電商平台營運優化｜2025 秋</p>
-
-      <div class="block">
-        <h4>挑戰</h4>
-        <p>亞馬遜全球開店台灣的社群帳號有粉絲但沒有溫度，貼文觀看長期卡在兩三百。同時賣家社群每天湧入重複的基礎問題，人力回覆吃不消。兩個問題其實同源：內容沒有對準賣家真正在想什麼。</p>
-      </div>
-
-      <div class="block">
-        <h4>我做的事</h4>
-        <ul>
-          <li>統籌 FB / IG / Threads 多平台內容策劃與發佈，把貼文從「官方公告」改寫成<b>賣家視角的創業敘事</b>。</li>
-          <li>承攬內容創作與產製，開發教育性素材，並深度參與數據分析與跨部門協作。</li>
-          <li>獨立開發簡易 HTML 網站並完成架設，實現品牌資訊聚合展示。</li>
-          <li>串接自動聊天機器人（ManyChat、漸強實驗室），打通<b>「社群諮詢 → 需求識別 → 資訊觸達」閉環</b>。</li>
-          <li>擔任亞馬遜賣家 LINE 社群管理者，統整行業 FAQ 庫並標準化。</li>
-        </ul>
-      </div>
-
-      <div class="outcome">
-        <div><div class="n">500<span>%+</span></div><div class="k">IG 貼文平均<br>觀看成長</div></div>
-        <div><div class="n">65<span>萬</span></div><div class="k">單支短影音<br>最高觀看</div></div>
-        <div><div class="n">45<span>%</span></div><div class="k">社群諮詢解決率<br>提升（3 週內）</div></div>
-        <div><div class="n">10<span>萬+</span></div><div class="k">三個月<br>總曝光量</div></div>
-      </div>
-
-      <div class="block">
-        <h4>學到什麼</h4>
-        <p>成長不是靠發更多，是靠發對的。真正讓數字翻倍的轉折點，是我把貼文主角從「亞馬遜這個平台」換成「一個正在猶豫要不要開始的人」。自動化也是同樣邏輯——機器人不是為了少回話，是為了讓人力回到真正需要判斷的問題上。</p>
-      </div>
-
-      <div class="strip">
-        <figure><img class="shot doc" src="assets/img/az-reel-2.jpg" alt="IG 短影音 65.2 萬觀看"><figcaption>單支短影音 65.2 萬觀看</figcaption></figure>
-        <figure><img class="shot doc" src="assets/img/az-reel-1.jpg" alt="IG 短影音 28.6 萬觀看"><figcaption>單支短影音 28.6 萬觀看</figcaption></figure>
-        <figure><img class="shot doc" src="assets/img/az-threads.jpg" alt="Threads 高峰會貼文 8.7 萬瀏覽"><figcaption>Threads 單篇 8.7 萬瀏覽</figcaption></figure>
-        <figure><img class="shot doc" src="assets/img/az-chatbot.jpg" alt="漸強實驗室社群機器人後台"><figcaption>社群機器人後台</figcaption></figure>
-        <figure><img class="shot doc" src="assets/img/az-manychat.jpg" alt="ManyChat 自動回覆流程設定"><figcaption>ManyChat 自動化流程</figcaption></figure>
-        <figure><img class="shot doc" src="assets/img/az-line-faq.jpg" alt="亞馬遜賣家 LINE 社群 FAQ 回覆"><figcaption>賣家社群 FAQ 庫</figcaption></figure>
-      </div>
-    </article>
-
-    <!-- ===== 案例 03 ===== -->
-    <article class="case" id="cs03">
-      <p class="case-num">案例 03 — 市場進入 × 數位體驗</p>
-      <h3>On-us 台灣市場從 0 到 1</h3>
-      <p class="case-meta">On-us（摩揪台灣）｜行銷企劃實習生・公司首位台灣市場行銷人員｜2025.06 – 2025.08</p>
-
-      <div class="block">
-        <h4>挑戰</h4>
-        <p>一家香港的電子禮券金融科技新創想進台灣，但在台灣沒有聲量、沒有案例、沒有本地內容。我是公司第一個做台灣市場的人，等於從空白開始建立這個品牌在台灣的存在。</p>
-      </div>
-
-      <div class="block">
-        <h4>我做的事</h4>
-        <ul>
-          <li><b>社群</b>：獨立規劃設計素材、撰寫貼文、安排 6–8 月 LinkedIn 經營方向與排程。</li>
-          <li><b>官網</b>：完成 sitemap 邏輯梳理與 Figma 交互架構設計，輸出可演示的 DEMO；導入 AEO 提升網頁在 AI 搜尋引擎的能見度。</li>
-          <li><b>陌生開發</b>：製作專攻台灣產業的 EDM 素材並協助發送，廣撒 200 多間企業。</li>
-          <li><b>內容</b>：撰寫 3–4 篇針對台灣市場洞察的中英文金融科技部落格，發佈於官網並以 SEO / AEO 搭配關鍵字操作。</li>
-          <li><b>研究</b>：加入香港團隊協作年度全英文白皮書，調取公司內部 campaign 數據、運用樞紐分析拆解電子禮券兌換週期與區域市場趨勢。</li>
-        </ul>
-      </div>
-
-      <div class="outcome">
-        <div><div class="n">87<span>%</span></div><div class="k">EDM 開信率<br>（200+ 間企業）</div></div>
-        <div><div class="n">5<span>萬+</span></div><div class="k">LinkedIn 三個月<br>累積瀏覽</div></div>
-        <div><div class="n">20-30<span>%</span></div><div class="k">官網自然流量<br>成長</div></div>
-        <div><div class="n">100<span>+</span></div><div class="k">LinkedIn<br>新增關注者</div></div>
-      </div>
-
-      <div class="block">
-        <h4>學到什麼</h4>
-        <p>這是我第一次完整跑「金融科技產品 → 官網數位體驗 → 商業轉化」的鏈路。也是第一次做全英文的行業研究輸出——從執行端的傳播，跨到研究端的視野，這個轉換比我想像中難，但也是收穫最大的地方。</p>
-      </div>
-
-      <div class="strip">
-        <figure><img class="shot doc" src="assets/img/onus-linkedin.jpg" alt="On-us LinkedIn 專頁經營後台"><figcaption>LinkedIn 全權經營</figcaption></figure>
-        <figure><img class="shot doc" src="assets/img/onus-sitemap.jpg" alt="官網 sitemap 與資訊架構"><figcaption>官網架構與 Figma DEMO</figcaption></figure>
-        <figure><img class="shot doc" src="assets/img/onus-blog.jpg" alt="官網英文部落格文章"><figcaption>中英文部落格（SEO/AEO）</figcaption></figure>
-        <figure><img class="shot" src="assets/img/onus-edm.jpg" alt="台灣市場 EDM 素材"><figcaption>台灣市場 EDM</figcaption></figure>
-        <figure><img class="shot doc" src="assets/img/onus-whitepaper.jpg" alt="APAC 年度英文白皮書數據圖表"><figcaption>APAC 年度白皮書</figcaption></figure>
-      </div>
-    </article>
-
-    <!-- ===== 案例 04 ===== -->
-    <article class="case" id="cs04">
-      <p class="case-num">案例 04 — 內容生產 × 品牌建立</p>
-      <h3>夢想銀號 四平台社群從零建立</h3>
-      <p class="case-meta">夢想銀號金融科技｜策略行銷部・金融服務與社群企劃實習生｜2023.12 – 2024.12</p>
-
-      <div class="block">
-        <h4>挑戰</h4>
-        <p>一家 P2P 線上職人借貸媒合平台，四個社群平台幾乎都是空的，也沒有專職社群人力。最難的其實不是產量，是「怎麼把借貸、風控這些讓人有距離感的金融題目，講得讓髮型師、美容師、創作者這些真正的目標用戶願意看完」。</p>
-      </div>
-
-      <div class="block">
-        <h4>我做的事</h4>
-        <ul>
-          <li><b>YouTube</b>：協助從零建立頻道，短影音的封面設計、取材、拍攝、腳本、剪輯<b>全部由我一人完成</b>。</li>
-          <li><b>Instagram</b>：獨立進行內容規劃與製作，創立「職人介紹」系列，每週上架兩部影片，<b>累積製作超過百部短影音</b>。</li>
-          <li><b>Dcard</b>：獨立產出文章與影片，使頻道通過官方認證審核成為「有潛力發展」帳號，流量達到可承接官方業配的門檻。</li>
-          <li><b>Facebook</b>：負責貼文內容與短影音，嘗試以 Meta 關鍵字廣告吸引更精準的目標流量。</li>
-          <li>每週產出 3 篇金融科技、新零售、AI 數據等貼近生活的新聞，自行抓取重點產製原創內容。</li>
-          <li>參與資料驗證模型開發與消費者金融行為分析，理解新型金融介面如何重塑消費決策。</li>
-        </ul>
-      </div>
-
-      <div class="outcome">
-        <div><div class="n">100<span>+</span></div><div class="k">累積產出<br>短影音數</div></div>
-        <div><div class="n">2<span>萬</span></div><div class="k">單支 Shorts 最高觀看<br>／500 人按讚</div></div>
-        <div><div class="n">4<span>平台</span></div><div class="k">獨立經營<br>YT / IG / FB / Dcard</div></div>
-        <div><div class="n">12<span>個月</span></div><div class="k">實習期間<br>（一年整）</div></div>
-      </div>
-
-      <div class="block">
-        <h4>學到什麼</h4>
-        <p>一個人扛四個平台，逼我學會判斷什麼該做、什麼不該做。四個平台的受眾其實不一樣——Dcard 要故事感、IG 要視覺、YouTube 要資訊密度、FB 要話題性，同一則新聞得改寫四次。這個習慣後來在亞馬遜做多平台內容時直接派上用場。</p>
-      </div>
-
-      <p class="golinks">
-        <a class="golink" href="https://www.instagram.com/dreamloantaiwan" target="_blank" rel="noopener">查看 Instagram 帳號 →</a>
-        <a class="golink" href="https://www.instagram.com/reel/C3rxlZDNPzp/" target="_blank" rel="noopener">代表作短影音 →</a>
-      </p>
-
-      <div class="strip">
-        <figure><img class="shot doc" src="assets/img/dreamloan-yt.jpg" alt="夢想銀號 YouTube 頻道"><figcaption>YouTube 頻道從零建立（128 部影片）</figcaption></figure>
-        <figure><img class="shot doc" src="assets/img/dreamloan-ig.jpg" alt="夢想銀號 Instagram 貼文牆"><figcaption>IG 短影音內容牆</figcaption></figure>
-        <figure><img class="shot doc" src="assets/img/dreamloan-profile.jpg" alt="夢想銀號 Instagram 帳號主頁"><figcaption>IG 帳號經營（868 則貼文）</figcaption></figure>
-        <figure><img class="shot doc" src="assets/img/dreamloan-dcard.jpg" alt="夢想銀號 Dcard 官方頻道"><figcaption>Dcard 官方認證頻道</figcaption></figure>
-        <figure><img class="shot doc" src="assets/img/dreamloan-fb.jpg" alt="夢想銀號 Facebook 專頁"><figcaption>Facebook 專頁經營</figcaption></figure>
-        <figure><img class="shot" src="assets/img/dreamloan-team.jpg" alt="策略行銷部團隊合照"><figcaption>策略行銷部團隊</figcaption></figure>
-      </div>
-    </article>
-
-    <!-- ===== 案例 05 ===== -->
-    <article class="case" id="cs05">
-      <p class="case-num">案例 05 — 公關策略 × 金融科技</p>
-      <h3>布爾喬亞 金融科技客戶策略</h3>
-      <p class="case-meta">布爾喬亞公關顧問｜約聘公關顧問・第一任政大廣告系專任校園大使｜2024.10 – 2025.06</p>
-
-      <div class="block">
-        <h4>挑戰</h4>
-        <p>公關顧問的客戶橫跨傳統銀行、虛擬貨幣交易所與 AI 新創，三者的監管環境、受眾心理與溝通禁忌完全不同。同一套說法在銀行安全、在交易所可能違規、在新創又太保守。</p>
-      </div>
-
-      <div class="block">
-        <h4>我做的事</h4>
-        <ul>
-          <li><b>永豐銀行</b>：設計信用卡市場策略，分析目標客群消費行為與喜好，提出差異化市場定位方案。</li>
-          <li><b>HoyaBit 虛擬貨幣交易所</b>：參與品牌傳播計劃，協助在<b>監管合規前提下</b>向台灣投資者溝通安全性與專業性。</li>
-          <li><b>ADGo（艾思智創）</b>：為全球第一款行銷人專用的專家級 AI 科技公司制定亞太市場進入策略；後續主導官網架設、三部 How-To 影片拍攝製作、每週直播規劃與品牌 workshop 企劃書。</li>
-          <li><b>Meet Taipei 新創嘉年華</b>：深度接觸多家 FinTech 新創、區塊鏈企業與金融加速器，協調傳播需求並提供策略建議。</li>
-          <li>擔任第一任廣告系專任校園大使，串接企業與校園資源。</li>
-        </ul>
-      </div>
-
-      <div class="outcome">
-        <div><div class="n">3<span>類</span></div><div class="k">客戶型態<br>銀行/交易所/新創</div></div>
-        <div><div class="n">1<span>st</span></div><div class="k">第一屆造局者計劃<br>第一任專任校園大使</div></div>
-        <div><div class="n">3<span>部</span></div><div class="k">How-To 影片<br>獨立拍攝製作</div></div>
-        <div><div class="n">9<span>個月</span></div><div class="k">合作期間</div></div>
-      </div>
-
-      <div class="block">
-        <h4>學到什麼</h4>
-        <p>國際金融企業與本地市場對接的過程中，既面臨監管合規的挑戰，也蘊含創新模式的機遇。這段經歷讓我確定了自己的定位——不是純創意、也不是純商業，而是站在中間把兩邊接起來的人。</p>
-      </div>
-
-      <div class="strip">
-        <figure><img class="shot doc" src="assets/img/ambassador.jpg" alt="政大廣告系專任校園大使榮譽證書"><figcaption>第一任專任校園大使</figcaption></figure>
-        <figure><img class="shot" src="assets/img/adgo-team.jpg" alt="艾思智創 ADGo 專案團隊"><figcaption>ADGo 亞太市場策略</figcaption></figure>
-        <figure><img class="shot" src="assets/img/meettaipei.jpg" alt="Meet Taipei 新創嘉年華展場"><figcaption>Meet Taipei 新創嘉年華</figcaption></figure>
-        <figure><img class="shot" src="assets/img/sinopac.jpg" alt="銀行信用卡專案活動"><figcaption>銀行信用卡市場策略</figcaption></figure>
-        <figure><img class="shot" src="assets/img/hoyabit.jpg" alt="HoyaBit 加密貨幣交易所品牌素材"><figcaption>HoyaBit 品牌傳播</figcaption></figure>
-        <figure><img class="shot doc" src="assets/img/vm-post.jpg" alt="實習經歷分享貼文"><figcaption>自製實習經歷貼文</figcaption></figure>
-      </div>
-    </article>
-
-    <!-- ===== 案例 06 ===== -->
-    <article class="case" id="cs06">
-      <p class="case-num">案例 06 — 賽事企劃 × 贊助洽談 × 品牌社群</p>
-      <h3>Bm7 詞曲創作大賽 × 存在音樂品牌經營</h3>
-      <p class="case-meta">存在音樂 Being Music｜暑期實習生・賽事社群主導｜2024.07 – 2024.08</p>
-
-      <div class="block">
-        <h4>挑戰</h4>
-        <p>第三屆 Bm7 詞曲創作大賽限額 45 人，要在暑假兩個月內招滿參賽者、拉到贊助、辦完決賽——而且收益必須覆蓋成本。難的地方在於，這是一個從零開始的比賽帳號，沒有粉絲、沒有前例，要同時說服素人創作者報名、說服廠商掏錢、說服藝人老師來當評審。</p>
-      </div>
-
-      <div class="block">
-        <h4>我做的事</h4>
-        <ul>
-          <li><b>賽事社群</b>：獨立負責比賽 IG 從零經營，短影音的策劃、腳本、拍攝、剪輯由我構想，<b>發布超過 40 篇貼文與限時動態</b>。</li>
-          <li><b>贊助洽談</b>：籌備期拉到 <b>8 間贊助廠商</b>，總計獲得超過市價 3 萬元的贊助資源；事後主動製作結算報告，保障雙方權益並呈現效益。</li>
-          <li><b>評審協商</b>：與藝人老師協商擔任決賽評審，鍛鍊對外溝通與議價能力。</li>
-          <li><b>活動系統</b>：使用 Accupass 後台設計活動介面、資訊排版與內容呈現，並操作平台廣告投放。</li>
-          <li><b>現場執行</b>：決賽當天負責現場配置、危機處理與參賽者溝通；參賽者表演照由我負責拍攝與調色。</li>
-          <li><b>品牌端</b>：同時負責存在音樂官方帳號的短影音腳本發想與拍攝，撰寫知識型、促銷與導購貼文，包含粉紅導線產品推廣與「吉他保養場」知識系列。</li>
-        </ul>
-      </div>
-
-      <div class="outcome">
-        <div><div class="n">2.7<span>萬</span></div><div class="k">半個月內<br>帳號觸及數</div></div>
-        <div><div class="n">8<span>間</span></div><div class="k">贊助廠商<br>市價 3 萬元資源</div></div>
-        <div><div class="n">40<span>組</span></div><div class="k">創作團體參賽<br>12 組進決賽</div></div>
-        <div><div class="n">1.5<span>萬</span></div><div class="k">單支影片<br>最高瀏覽</div></div>
-      </div>
-
-      <div class="block">
-        <h4>學到什麼</h4>
-        <p>這是我第一次完整跑一場活動的商業模型——收入要覆蓋成本、贊助商要看到回報、參賽者要覺得值得。事後的結算報告是我自己提議做的，因為我發現贊助商真正在意的不只是曝光數字，而是有沒有人幫他們把數字整理成可以交代的東西。這個「把成果變成可溝通的證據」的習慣，後來變成我做每個專案的預設動作。</p>
-      </div>
-
-      <p class="golinks">
-        <a class="golink" href="https://www.instagram.com/being_bm7_contest" target="_blank" rel="noopener">賽事 Instagram 帳號 →</a>
-        <a class="golink" href="https://www.instagram.com/beingmusic2017" target="_blank" rel="noopener">存在音樂官方帳號 →</a>
-      </p>
-
-      <div class="strip">
-        <figure><img class="shot doc" src="assets/img/bm7-ig.jpg" alt="Bm7 詞曲創作大賽 Instagram 帳號"><figcaption>賽事 IG 從零建立</figcaption></figure>
-        <figure><img class="shot doc" src="assets/img/bm7-grid.jpg" alt="Bm7 大賽 Instagram 貼文牆"><figcaption>40+ 篇貼文與限時動態</figcaption></figure>
-        <figure><img class="shot doc" src="assets/img/bm7-accupass.jpg" alt="Accupass 活動頁面"><figcaption>Accupass 活動頁設計</figcaption></figure>
-        <figure><img class="shot" src="assets/img/bm7-stage.jpg" alt="決賽現場表演"><figcaption>決賽現場（表演照由我拍攝調色）</figcaption></figure>
-        <figure><img class="shot" src="assets/img/bm7-group.jpg" alt="比賽結束大合照"><figcaption>參賽者、評審與贊助商合照</figcaption></figure>
-        <figure><img class="shot" src="assets/img/being-team.jpg" alt="共同舉辦活動的工作團隊"><figcaption>賽事工作團隊</figcaption></figure>
-        <figure><img class="shot doc" src="assets/img/being-ig.jpg" alt="存在音樂官方 Instagram"><figcaption>品牌官方帳號經營</figcaption></figure>
-        <figure><img class="shot doc" src="assets/img/being-cable.jpg" alt="粉紅導線產品推廣視覺"><figcaption>粉紅導線產品推廣</figcaption></figure>
-        <figure><img class="shot doc" src="assets/img/being-guitar.jpg" alt="吉他保養場知識型系列"><figcaption>「吉他保養場」知識系列</figcaption></figure>
-      </div>
-    </article>
-
-    <article class="case" id="cs07">
-      <p class="case-num">案例 07 — 內容創作 × 節目製作</p>
-      <h3>想見鬼想見鬼想見鬼</h3>
-      <p class="case-meta">政大之聲實習廣播電台｜一級助理・節目共同創立與主持｜2022.09 – 2025.01</p>
-
-      <div class="block">
-        <h4>挑戰</h4>
-        <p>校園廣播最大的敵人是「沒人聽」。我們想做一個學生會主動追的節目，而不是被課程要求聽完的作業。靈異故事是切入點，但真正要解的是——怎麼讓聲音在沒有畫面的情況下抓住人。</p>
-      </div>
-
-      <div class="block">
-        <h4>我做的事</h4>
-        <ul>
-          <li>參與節目概念發想與定位，打造<b>結合靈異故事與校園生活</b>的特色廣播，建立獨特的節目風格與架構。</li>
-          <li>負責一半的節目腳本撰寫，透過故事蒐集、改編與原創內容，維持每集的敘事張力與懸疑氛圍。</li>
-          <li>擔任節目主持人之一，運用表達技巧與情緒掌控營造氛圍，與聽眾建立情感連結。</li>
-          <li>參與後期製作與推廣，包括音效與音樂選擇、社群媒體宣傳策略制定。</li>
-          <li>同期在新聞部獨立完成專題報導，每週帶領編播小組播報重點新聞。</li>
-        </ul>
-      </div>
-
-      <div class="outcome">
-        <div><div class="n">50<span>%</span></div><div class="k">節目貢獻比例<br>（核心團隊成員）</div></div>
-        <div><div class="n">2<span>項</span></div><div class="k">藝美獎入圍<br>最佳綜合節目・雙人主持</div></div>
-        <div><div class="n">5<span>張</span></div><div class="k">校內榮譽獎狀</div></div>
-        <div><div class="n">6<span>個</span></div><div class="k">參與製作<br>節目企劃</div></div>
-      </div>
-
-      <div class="block">
-        <h4>學到什麼</h4>
-        <p>廣播是我所有內容能力的根。在只有聲音的媒介裡練出來的節奏感、鋪陳與情緒控制，後來做短影音、寫貼文、甚至做提案簡報時全都用得上。它也教會我一件事：好內容是被設計出來的，不是靈感來了就有。</p>
-      </div>
-
-      <div class="strip">
-        <figure><img class="shot" src="assets/img/radio-award.jpg" alt="政大之聲頒獎"><figcaption>政大之聲最佳節目主持人</figcaption></figure>
-        <figure><img class="shot" src="assets/img/radio-team.jpg" alt="節目團隊合照"><figcaption>節目團隊</figcaption></figure>
-        <figure><img class="shot doc" src="assets/img/radio-nominee.jpg" alt="藝美獎最佳綜合節目入圍名單"><figcaption>藝美獎最佳綜合節目入圍</figcaption></figure>
-        <figure><img class="shot doc" src="assets/img/radio-cert2.jpg" alt="最佳雙人主持獎獎狀"><figcaption>最佳雙人/多人主持獎</figcaption></figure>
-        <figure><img class="shot doc" src="assets/img/radio-cert.jpg" alt="傳播學院服務證書"><figcaption>傳播學院服務證書</figcaption></figure>
-      </div>
-    </article>
-
-    <!-- ===== 案例 08 ===== -->
-    <article class="case" id="cs08">
-      <p class="case-num">案例 08 — AI 協作 × 產品開發</p>
-      <h3>Craig 財經站：用 AI 把四個自動化專案整合成一個平台</h3>
-      <p class="case-meta">個人專案｜產品規劃、需求定義、驗收；程式由 AI（Claude Code）撰寫｜2026.09 – 2026.10</p>
-
-      <div class="block">
-        <h4>挑戰</h4>
-        <p>我陸續在 GitHub 寫了幾個財經自動化程式：每天早上寄來的總經新聞摘要、每週的台美股基本面研究、券商對帳單整理、Notion 記帳的股價更新。它們各自運作、各自寄信，資訊散在四個地方。我想要一個入口，打開就能看到今天該知道的事，也能放心分享給朋友，而不暴露自己的持股。</p>
-      </div>
-
-      <div class="block">
-        <h4>我做的事</h4>
-        <ul>
-          <li>以產品負責人的角色和 AI 協作：定義每一頁要解決的問題、決定架構與取捨，<b>程式由 AI 撰寫，我負責驗收與修正方向</b>。</li>
-          <li>把四個專案的輸出整合成一個網站，每天由 GitHub Actions 自動重建、部署到 Cloudflare，<b>不需要自己維護伺服器</b>。</li>
-          <li>設計「今日觀察」：依法人資金流與產業趨勢的透明規則，每天篩出台股、美股各一檔，再由四個模擬研究角色從資金、趨勢、估值、風險四個角度撰寫觀點，並刻意定位成研究素材，不做買賣建議。</li>
-          <li>把 Notion 記帳和券商對帳單自動逐檔核對，15 個月的成交紀錄算出的持股和 Notion 完全一致。</li>
-          <li>處理分享時的隱私：網站以 email 驗證碼登入，個人投資頁再加一道伺服器端密碼；另外做了讓朋友用虛擬資金互相比賽的模擬交易。</li>
-          <li>前後依使用體驗改版：把十萬字的研究報告改成表格與卡片、加入走勢小圖、即時新聞與動畫，讓人一眼抓到重點。</li>
-        </ul>
-      </div>
-
-      <div class="outcome">
-        <div><div class="n">4<span>個</span></div><div class="k">原本分散的<br>自動化專案整合</div></div>
-        <div><div class="n">6<span>頁</span></div><div class="k">總覽・即時快報・投資<br>總經・研究・模擬交易</div></div>
-        <div><div class="n">15<span>個月</span></div><div class="k">券商對帳單<br>自動核對</div></div>
-        <div><div class="n">0<span>元</span></div><div class="k">伺服器費用<br>（全用免費方案）</div></div>
-      </div>
-
-      <div class="block">
-        <h4>學到什麼</h4>
-        <p>AI 能寫程式，但「要做什麼、做到什麼程度、哪裡不能妥協」還是人要決定。這個專案裡最關鍵的幾個判斷都不是技術問題：投資頁要不要上鎖、每日標的該叫「推薦」還是「觀察」、對帳發現 123 筆不一致時，要先懷疑資料還是懷疑程式。把需求講清楚、每一步都驗收，是和 AI 協作最重要的能力。</p>
-      </div>
-
-      <div class="strip">
-        <figure><img class="shot" src="assets/img/financehub-home.jpg" alt="總覽頁：今日觀察標的與四位模擬角色觀點"><figcaption>今日觀察：資金流規則篩選＋四種研究角度</figcaption></figure>
-        <figure><img class="shot" src="assets/img/financehub-weekly.jpg" alt="每週研究：全市場篩選漏斗"><figcaption>每週研究：全市場篩選漏斗</figcaption></figure>
-        <figure><img class="shot" src="assets/img/financehub-news.jpg" alt="即時快報：依產業關鍵字分類的新聞"><figcaption>即時快報：依產業自動分類</figcaption></figure>
-      </div>
-    </article>
-
-  </div>
-</section>
-
-<!-- ===== 其他經歷 ===== -->
-<section id="more">
-  <div class="wrap">
-    <div class="shead"><h2>其他經歷</h2><span class="en">ALSO</span></div>
-    <p class="sintro">上面七件是我最想拿出來談的。以下這些同樣真實，只是規模或深度沒有到需要單獨開一個案例。</p>
-
-    <div class="mini">
-      <div class="when">2024.10 – 2025.03</div>
-      <div>
-        <h4>樂利豐股份有限公司</h4>
-        <p class="role">行銷外包合作人員｜金賓威士忌 Jim Beam</p>
-        <p>負責「金賓嗨店」活動短影音剪輯；協助尋找 KOL 合作夥伴並分析受眾特性、互動品質與風格契合度；參與活動波段規劃，設計從預熱、高潮到延續階段的節奏性行銷策略。</p>
-        <div class="strip"><figure><img class="shot doc" src="assets/img/jimbeam.jpg" alt="金賓威士忌社群品牌定位"><figcaption>酒類品牌社群定位</figcaption></figure></div>
       </div>
     </div>
+  </section>
 
-    <div class="mini">
-      <div class="when">2024.09 – 2025.01</div>
-      <div>
-        <h4>非我設計 Podcast「聽你在設計」</h4>
-        <p class="role">外包 Podcast 剪輯</p>
-        <p>獨立完成 12 集節目的完整後製，包含片頭設計、結尾音效編排、音頻平衡、雜音消除與語音清晰度優化，並參與現場錄製。</p>
-      </div>
+  <!-- ===== 作品 ===== -->
+  <section class="wrap sec" id="work">
+    <div class="sec-head">
+      <h2><span>SELECTED WORK</span>精選作品</h2>
+      <p>八個案例，每一件都寫了當時面對的問題、我實際做的事，以及可以驗證的成果。</p>
     </div>
-
-    <div class="mini">
-      <div class="when">2023.09 – 2025.06</div>
-      <div>
-        <h4>校內實務參與</h4>
-        <p class="role">產學合作・社團幹部・活動主持</p>
-        <p>代表廣告系與財團法人利伯他茲教育基金會產學合作，管理其 Instagram 社群平台；擔任傳院系學會公關組長、廣告營課程組員（帶領小隊獲最佳簡報獎）、吉他社器材長、政大金旋獎 42 屆初賽主持人。</p>
-        <div class="strip"><figure><img class="shot doc" src="assets/img/adcamp.jpg" alt="政大廣告營提案比賽最佳簡報獎"><figcaption>廣告營最佳簡報獎</figcaption></figure></div>
-      </div>
+    <div class="bento">
+      <a class="card work c-6 big reveal" href="work/amazon-campus.html">
+        <div class="cover"><img src="assets/img/speak-amazon.webp" alt="亞馬遜跨境電商人才培育計畫" width="641" height="641" loading="lazy" decoding="async"></div>
+        <div class="body">
+          <p class="kicker">01 · 專案管理 × 活動執行</p>
+          <h3>亞馬遜跨境電商人才培育計畫</h3>
+          <p class="result">7 人團隊・200 人報名・40% 轉化</p>
+          <p class="go"><span>Amazon Global Selling</span><span>看案例 →</span></p>
+        </div>
+      </a>
+      <a class="card work c-6 big reveal" href="work/amazon-social.html">
+        <div class="cover"><img src="assets/img/amazon-summit.webp" alt="亞馬遜全球開店 社群全棧運營" width="469" height="292" loading="lazy" decoding="async"></div>
+        <div class="body">
+          <p class="kicker">02 · 內容成長 × 社群自動化</p>
+          <h3>亞馬遜全球開店 社群全棧運營</h3>
+          <p class="result">觀看成長 500%+・單支 65 萬觀看</p>
+          <p class="go"><span>Amazon Global Selling</span><span>看案例 →</span></p>
+        </div>
+      </a>
+      <a class="card work c-4 reveal" href="work/onus.html">
+        <div class="cover"><img src="assets/img/onus-blog.webp" alt="On-us 台灣市場 0 到 1" width="815" height="340" loading="lazy" decoding="async" style="object-position:left center"></div>
+        <div class="body">
+          <p class="kicker">03 · 市場進入 × 數位體驗</p>
+          <h3>On-us 台灣市場 0 到 1</h3>
+          <p class="result">EDM 開信率 87%・LinkedIn 5 萬瀏覽</p>
+          <p class="go"><span>On-us（摩揪台灣）</span><span>看案例 →</span></p>
+        </div>
+      </a>
+      <a class="card work c-4 reveal" href="work/dreamloan.html">
+        <div class="cover"><img src="assets/img/dreamloan-yt.webp" alt="夢想銀號 四平台社群從零建立" width="981" height="738" loading="lazy" decoding="async"></div>
+        <div class="body">
+          <p class="kicker">04 · 內容生產 × 品牌建立</p>
+          <h3>夢想銀號 四平台社群從零建立</h3>
+          <p class="result">百部短影音・單支破萬觀看</p>
+          <p class="go"><span>夢想銀號金融科技</span><span>看案例 →</span></p>
+        </div>
+      </a>
+      <a class="card work c-4 reveal" href="work/bourgeois.html">
+        <div class="cover"><img src="assets/img/hoyabit.webp" alt="布爾喬亞 金融科技客戶策略" width="352" height="196" loading="lazy" decoding="async"></div>
+        <div class="body">
+          <p class="kicker">05 · 公關策略 × 金融科技</p>
+          <h3>布爾喬亞 金融科技客戶策略</h3>
+          <p class="result">銀行・虛擬貨幣交易所・AI 新創</p>
+          <p class="go"><span>布爾喬亞公關顧問</span><span>看案例 →</span></p>
+        </div>
+      </a>
+      <a class="card work c-4 reveal" href="work/bm7.html">
+        <div class="cover"><img src="assets/img/bm7-stage.webp" alt="Bm7 詞曲創作大賽" width="572" height="372" loading="lazy" decoding="async"></div>
+        <div class="body">
+          <p class="kicker">06 · 賽事企劃 × 贊助洽談</p>
+          <h3>Bm7 詞曲創作大賽</h3>
+          <p class="result">8 間贊助・40 組參賽・2.7 萬觸及</p>
+          <p class="go"><span>存在音樂 Being Music</span><span>看案例 →</span></p>
+        </div>
+      </a>
+      <a class="card work c-4 reveal" href="work/radio.html">
+        <div class="cover"><img src="assets/img/radio-team.webp" alt="想見鬼想見鬼想見鬼" width="394" height="254" loading="lazy" decoding="async"></div>
+        <div class="body">
+          <p class="kicker">07 · 內容創作 × 節目製作</p>
+          <h3>想見鬼想見鬼想見鬼</h3>
+          <p class="result">節目共同創立・藝美獎入圍</p>
+          <p class="go"><span>政大之聲實習廣播電台</span><span>看案例 →</span></p>
+        </div>
+      </a>
+      <a class="card work c-4 reveal" href="work/finance-hub.html">
+        <div class="cover"><img src="assets/img/financehub-home.webp" alt="Craig 財經站" width="1400" height="1291" loading="lazy" decoding="async"></div>
+        <div class="body">
+          <p class="kicker">08 · AI 協作 × 產品開發</p>
+          <h3>Craig 財經站</h3>
+          <p class="result">4 個自動化專案整合・每日自動更新</p>
+          <p class="go"><span>個人專案</span><span>看案例 →</span></p>
+        </div>
+      </a>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- ===== 競賽 ===== -->
-<section id="awards">
-  <div class="wrap">
-    <div class="shead"><h2>競賽</h2><span class="en">COMPETITIONS</span></div>
-    <p class="sintro">四場全國性或校際競賽，都是團隊作品。我標註了自己的實際貢獻比例與負責環節。</p>
-    <div class="awards">
-      <div class="award">
+  <!-- ===== 經歷 ===== -->
+  <section class="wrap sec" id="experience">
+    <div class="sec-head">
+      <h2><span>EXPERIENCE</span>經歷</h2>
+      <p>有案例頁的可以點進去看細節；其餘規模較小的直接寫在這裡。</p>
+    </div>
+    <div class="card reveal">
+      <ul class="timeline">
+        <li>
+          <span class="when">2025 秋</span>
+          <div><h3>Amazon Global Selling 亞馬遜全球開店</h3><p class="role">Marketing 實習・T-Ambassador</p></div>
+          <a class="link" href="work/amazon-social.html">看案例 →</a>
+        </li>
+        <li>
+          <span class="when">2025.06 – 2025.08</span>
+          <div><h3>On-us 摩揪台灣</h3><p class="role">行銷企劃實習生・首位台灣市場行銷</p></div>
+          <a class="link" href="work/onus.html">看案例 →</a>
+        </li>
+        <li>
+          <span class="when">2024.10 – 2025.06</span>
+          <div><h3>布爾喬亞公關顧問</h3><p class="role">約聘公關顧問・第一任專任校園大使</p></div>
+          <a class="link" href="work/bourgeois.html">看案例 →</a>
+        </li>
+        <li>
+          <span class="when">2024.10 – 2025.03</span>
+          <div><h3>樂利豐股份有限公司</h3><p class="role">行銷外包合作｜金賓威士忌 Jim Beam</p>
+          <p class="desc">負責「金賓嗨店」活動短影音剪輯；協助尋找 KOL 合作夥伴並分析受眾特性、互動品質與風格契合度；參與活動波段規劃，設計從預熱、高潮到延續階段的節奏性行銷策略。</p></div>
+          <span></span>
+        </li>
+        <li>
+          <span class="when">2024.09 – 2025.01</span>
+          <div><h3>非我設計 Podcast「聽你在設計」</h3><p class="role">外包 Podcast 剪輯</p>
+          <p class="desc">獨立完成 12 集節目的完整後製，包含片頭設計、結尾音效編排、音頻平衡、雜音消除與語音清晰度優化，並參與現場錄製。</p></div>
+          <span></span>
+        </li>
+        <li>
+          <span class="when">2024.07 – 2024.08</span>
+          <div><h3>存在音樂 Being Music</h3><p class="role">暑期實習生・賽事社群主導</p></div>
+          <a class="link" href="work/bm7.html">看案例 →</a>
+        </li>
+        <li>
+          <span class="when">2023.12 – 2024.12</span>
+          <div><h3>夢想銀號金融科技</h3><p class="role">策略行銷部・金融服務與社群企劃實習生</p></div>
+          <a class="link" href="work/dreamloan.html">看案例 →</a>
+        </li>
+        <li>
+          <span class="when">2023.09 – 2025.06</span>
+          <div><h3>校內實務參與</h3><p class="role">產學合作・社團幹部・活動主持</p>
+          <p class="desc">代表廣告系與利伯他茲教育基金會產學合作，管理其 Instagram；擔任傳院系學會公關組長、廣告營課程組員（帶領小隊獲最佳簡報獎）、吉他社器材長、政大金旋獎 42 屆初賽主持人。</p></div>
+          <span></span>
+        </li>
+        <li>
+          <span class="when">2022.09 – 2025.01</span>
+          <div><h3>政大之聲實習廣播電台</h3><p class="role">一級助理・節目共同創立與主持</p></div>
+          <a class="link" href="work/radio.html">看案例 →</a>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ===== 競賽 ===== -->
+  <section class="wrap sec" id="awards">
+    <div class="sec-head">
+      <h2><span>COMPETITIONS</span>競賽</h2>
+      <p>都是團隊作品，我標註了自己的實際貢獻比例與負責環節。</p>
+    </div>
+    <div class="bento" data-lb-group>
+      <article class="card award c-3 reveal">
+        <div class="thumb"><img src="assets/img/yunus.webp" alt="台灣尤努斯創新獎頒獎典禮" width="385" height="354" loading="lazy" decoding="async" data-lb></div>
         <h3>第五屆台灣尤努斯創新獎</h3>
         <p class="rank">社會組 佳作｜3 萬元創業獎金</p>
-        <p>由諾貝爾和平獎得主尤努斯博士授權的基金會主辦，強調「用商業邏輯實現社會價值」。從 236 支團隊中入選總決賽 10 組，決賽獲前 6 名。</p>
-      </div>
-      <div class="award">
+        <p class="d">由諾貝爾和平獎得主尤努斯博士授權的基金會主辦，強調「用商業邏輯實現社會價值」。從 236 支團隊中入選總決賽 10 組，決賽獲前 6 名。</p>
+      </article>
+      <article class="card award c-3 reveal">
+        <div class="thumb"><img src="assets/img/pr-award.webp" alt="2024 校園公關提案競賽獎狀" width="220" height="311" class="doc" loading="lazy" decoding="async" data-lb></div>
         <h3>2024 校園公關提案競賽</h3>
         <p class="rank">佳作｜134 組取 15 組・貢獻 20%</p>
-        <p>負責消費者洞察分析與策略發展。設計並執行針對 Z 世代的定性研究，提出的「物質與心理回饋」洞察成為整體策略基石。</p>
-      </div>
-      <div class="award">
+        <p class="d">負責消費者洞察分析與策略發展。設計並執行針對 Z 世代的定性研究，提出的「物質與心理回饋」洞察成為整體策略基石。</p>
+      </article>
+      <article class="card award c-3 reveal">
+        <div class="thumb"><img src="assets/img/brand-comp.webp" alt="2023 全球品牌策劃與設計大賽現場" width="250" height="458" loading="lazy" decoding="async" data-lb></div>
         <h3>2023 全球品牌策劃與設計大賽</h3>
         <p class="rank">入圍複賽｜349 隊取 48 組・貢獻 25%</p>
-        <p>擔任品牌策略分析師，運用品牌資產評估工具診斷定位、透過競爭者分析找出藍海機會，設計品牌進化策略框架。</p>
-      </div>
-            <div class="award">
+        <p class="d">擔任品牌策略分析師，運用品牌資產評估工具診斷定位、透過競爭者分析找出藍海機會，設計品牌進化策略框架。</p>
+      </article>
+      <article class="card award c-3 reveal">
+        
         <h3>創意行動家 UX／UI 專案</h3>
         <p class="rank">佳作｜全班 8 組・貢獻 25%</p>
-        <p>負責使用者研究與介面設計，透過深度訪談與使用者旅程分析識別痛點，將概念轉化為可測試的高保真原型。</p>
-      </div>
+        <p class="d">負責使用者研究與介面設計，透過深度訪談與使用者旅程分析識別痛點，將概念轉化為可測試的高保真原型。</p>
+      </article>
     </div>
-    <div class="strip" style="margin-top:34px">
-      <figure><img class="shot" src="assets/img/yunus.jpg" alt="台灣尤努斯創新獎頒獎典禮"><figcaption>尤努斯創新獎領獎</figcaption></figure>
-      <figure><img class="shot doc" src="assets/img/pr-award.jpg" alt="2024 校園公關提案競賽獎狀"><figcaption>校園公關提案競賽 佳作</figcaption></figure>
-      <figure><img class="shot" src="assets/img/brand-comp.jpg" alt="2023 全球品牌策劃與設計大賽現場"><figcaption>全球品牌大賽決賽現場</figcaption></figure>
-    </div>
-  </div>
-</section>
+  </section>
 
-<!-- ===== 能力 ===== -->
-<section id="skills">
-  <div class="wrap">
-    <div class="shead"><h2>能力與證照</h2><span class="en">CREDENTIALS</span></div>
-    <p class="sintro">廣告系出身的人要進科技與金融，缺的通常不是熱情，是可驗證的底層知識。以下是我用課餘時間補起來的部分。</p>
-    <div class="certs">
-      <div class="certgroup">
+  <!-- ===== 能力 ===== -->
+  <section class="wrap sec" id="skills">
+    <div class="sec-head">
+      <h2><span>CREDENTIALS</span>能力與證照</h2>
+      <p>廣告系出身的人要進科技與金融，缺的通常不是熱情，是可驗證的底層知識。以下是我用課餘時間補起來的部分。</p>
+    </div>
+    <div class="bento" data-lb-group>
+      <div class="card cert c-3 reveal">
         <h3>數據與數位行銷</h3>
         <ul>
-          <li>Google Analytics 分析認證</li>
-          <li>Google Ads 搜尋／多媒體／影片／應用程式／評估認證</li>
-          <li>Google 數位人才探索計畫：數位行銷學程</li>
-          <li>Meta 100-101 初階數位行銷專員</li>
-        </ul>
+<li>Google Analytics 分析認證</li>
+<li>Google Ads 搜尋／多媒體／影片／應用程式／評估認證</li>
+<li>Google 數位人才探索計畫：數位行銷學程</li>
+<li>Meta 100-101 初階數位行銷專員</li>
+</ul>
       </div>
-      <div class="certgroup">
+      <div class="card cert c-3 reveal">
         <h3>雲端與 AI</h3>
         <ul>
-          <li>Google Cloud 學程（運算、網路安全、大數據與 AI 服務）</li>
-          <li>生成式 AI 與 LLM：Vertex AI Studio、Model Garden 實作</li>
-          <li>智慧科技與管理應用（逢甲大學｜Power BI、Weka）</li>
-          <li>程式應用與 AI（致理科大｜Python 資料科學與機器學習）</li>
-        </ul>
+<li>Google Cloud 學程（運算、網路安全、大數據與 AI 服務）</li>
+<li>生成式 AI 與 LLM：Vertex AI Studio、Model Garden 實作</li>
+<li>智慧科技與管理應用（逢甲大學｜Power BI、Weka）</li>
+<li>程式應用與 AI（致理科大｜Python 資料科學與機器學習）</li>
+</ul>
       </div>
-      <div class="certgroup">
+      <div class="card cert c-3 reveal">
         <h3>金融科技與區塊鏈</h3>
         <ul>
-          <li>台灣金融研訓院 金融市場常識與職業道德</li>
-          <li>台灣金融研訓院 金融科技力知識檢定</li>
-          <li>TibaMe 區塊鏈的前世今生與未來</li>
-          <li>TibaMe 使用 Golang 寫出自己的智能合約</li>
-        </ul>
+<li>台灣金融研訓院 金融市場常識與職業道德</li>
+<li>台灣金融研訓院 金融科技力知識檢定</li>
+<li>TibaMe 區塊鏈的前世今生與未來</li>
+<li>TibaMe 使用 Golang 寫出自己的智能合約</li>
+</ul>
       </div>
-      <div class="certgroup">
+      <div class="card cert c-3 reveal">
         <h3>管理與商業</h3>
         <ul>
-          <li>IBMI 專案管理學程（IBM 合作機構）</li>
-          <li>IBMI 風險管理、變革管理、領導與團隊發展</li>
-          <li>TBSA 商業企劃能力初級檢定</li>
-          <li>TIMS 初階行銷企劃／TIIBS 初階企業管理</li>
-          <li>CEPT 跨境電商技能認證</li>
-        </ul>
+<li>IBMI 專案管理學程（IBM 合作機構）</li>
+<li>IBMI 風險管理、變革管理、領導與團隊發展</li>
+<li>TBSA 商業企劃能力初級檢定</li>
+<li>TIMS 初階行銷企劃／TIIBS 初階企業管理</li>
+<li>CEPT 跨境電商技能認證</li>
+</ul>
+      </div>
+      <div class="card c-12 reveal" style="display:flex;flex-wrap:wrap;gap:20px;align-items:center;justify-content:space-between">
+        <div>
+          <p class="label">常用工具 Tools</p>
+          <ul class="chips"><li>Figma</li><li>Google Analytics</li><li>Meta Ads</li><li>ManyChat</li><li>Power BI</li><li>Excel 樞紐分析</li><li>Premiere / CapCut</li><li>Canva</li><li>HTML / CSS</li><li>Python 基礎</li><li>SEO / AEO</li><li>Prompt 設計</li></ul>
+        </div>
+        <div class="cert-thumbs">
+          <img src="assets/img/ibm-cert.webp" alt="IBMI 專案管理學程證書" width="537" height="381" loading="lazy" decoding="async" data-lb>
+          <img src="assets/img/tibame.webp" alt="TibaMe 區塊鏈完訓證書" width="843" height="595" loading="lazy" decoding="async" data-lb>
+        </div>
       </div>
     </div>
-    <ul class="tags">
-      <li>Figma</li><li>Google Analytics</li><li>Meta Ads</li><li>ManyChat</li>
-      <li>Power BI</li><li>Excel 樞紐分析</li><li>Premiere / CapCut</li><li>Canva</li>
-      <li>HTML / CSS</li><li>Python 基礎</li><li>SEO / AEO</li><li>Prompt 設計</li>
-    </ul>
-    <div class="strip" style="margin-top:30px">
-      <figure><img class="shot doc" src="assets/img/ibm-cert.jpg" alt="IBMI 專案管理學程證書"><figcaption>IBMI 專案管理學程</figcaption></figure>
-      <figure><img class="shot doc" src="assets/img/tibame.jpg" alt="TibaMe 區塊鏈完訓證書"><figcaption>區塊鏈與智能合約</figcaption></figure>
+  </section>
+
+  <!-- ===== 聯絡 ===== -->
+  <section class="wrap sec" id="contact">
+    <div class="card inv contact reveal">
+      <p class="kicker">CONTACT</p>
+      <h2>對金融科技、跨境電商、<br>科技行銷有職缺或合作？</h2>
+      <p class="muted" style="margin:14px 0 26px;max-width:34em">想看一頁履歷，或聊聊上面任何一個專案，歡迎直接來信。</p>
+      <a class="mail" href="mailto:craigshih1206@gmail.com">craigshih1206@gmail.com</a>
+      <div class="socials">
+        <a href="https://www.linkedin.com/in/craig-shih-951121338/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5ZM3 9.75h4v11H3v-11Zm6.5 0h3.8v1.5h.06c.53-1 1.83-2.06 3.77-2.06 4.03 0 4.77 2.65 4.77 6.1v5.46h-4v-4.84c0-1.15-.02-2.64-1.6-2.64-1.62 0-1.86 1.26-1.86 2.56v4.92h-4v-11Z"/></svg>LinkedIn</a>
+        <a href="https://github.com/craigshih" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-3.16 19.49c.5.09.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.9 1.52 2.34 1.08 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.02a9.56 9.56 0 0 1 5 0c1.91-1.29 2.75-1.02 2.75-1.02.55 1.38.2 2.4.1 2.65.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.68-4.57 4.93.36.31.68.92.68 1.85v2.75c0 .27.18.58.69.48A10 10 0 0 0 12 2Z"/></svg>GitHub</a>
+        <a href="https://craig-finance.pages.dev/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg>Craig 財經站</a>
+        <a href="mailto:craigshih1206@gmail.com?subject=索取一頁履歷"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>索取履歷 PDF</a>
+      </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- ===== 關於 ===== -->
-<section id="about">
+</main>
+
+<footer>
   <div class="wrap">
-    <div class="shead"><h2>關於我</h2><span class="en">ABOUT</span></div>
-    <p class="lede">我的起點是廣告與廣播——研究人怎麼被說服、怎麼被打動。後來我發現，<strong>真正難的不是把話講好，而是讓一個聽不懂技術的市場，願意相信一個新的金融或電商產品</strong>。</p>
-    <p class="lede">於是我一路往科技與商業靠：在金融科技新創經營社群、在公關顧問服務銀行與虛擬貨幣交易所、在香港 FinTech 新創打開台灣市場、在亞馬遜全球開店做跨境電商的內容與營運。同時補足自己的技術空白，自學 Google Cloud、生成式 AI、區塊鏈與 Python。</p>
-    <p class="lede">現在在政大科智所，做的是同一件事的延伸：<strong>技術 × 管理 × 創新</strong>。</p>
-    <ul class="tags">
-      <li>國立政治大學 廣告學系（2025 畢業）</li>
-      <li>外交學系 輔系</li>
-      <li>科技管理與智慧財產研究所（在學）</li>
-      <li>TOEIC 895</li>
-      <li>IELTS 7.0（C1）</li>
-    </ul>
+    <span>© 2026 施宥丞 Craig Shih</span>
+    <span><a href="mailto:craigshih1206@gmail.com">craigshih1206@gmail.com</a></span>
   </div>
-</section>
-
-<!-- ===== 聯絡 ===== -->
-<section class="contact" id="contact">
-  <div class="wrap">
-    <div class="shead"><h2>聯絡我</h2><span class="en">CONTACT</span></div>
-    <p>目前就讀政大科智所，對金融科技、跨境電商與科技行銷的職缺與合作都有興趣。想看一頁履歷或聊聊上面任何一個專案，歡迎來信。</p>
-    <ul class="clist">
-      <li><a href="mailto:craigshih1206@gmail.com">craigshih1206@gmail.com</a></li>
-      <li><a href="https://github.com/craigshih">GitHub</a></li>
-      <li><a href="https://www.linkedin.com/in/craig-shih-951121338/">LinkedIn</a></li>
-    </ul>
-  </div>
-</section>
-
-<footer><div class="wrap">© 2026 施宥丞 Craig Shih</div></footer>
+</footer>
 
 <div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="放大檢視圖片">
-  <button id="lbclose" aria-label="關閉">×</button>
-  <div><img id="lbimg" src="" alt=""><p class="cap" id="lbcap"></p></div>
+  <button class="x" aria-label="關閉">✕</button>
+  <button class="prev" aria-label="上一張">←</button>
+  <figure><img src="" alt=""><figcaption></figcaption></figure>
+  <button class="next" aria-label="下一張">→</button>
 </div>
-
-<script>
-(function(){
-  var lb=document.getElementById('lb'),im=document.getElementById('lbimg'),cap=document.getElementById('lbcap');
-  function open(src,alt,text){im.src=src;im.alt=alt;cap.textContent=text;lb.setAttribute('open','');document.body.style.overflow='hidden';}
-  function close(){lb.removeAttribute('open');im.src='';document.body.style.overflow='';}
-  document.querySelectorAll('.shot').forEach(function(img){
-    img.addEventListener('click',function(){
-      var fig=img.closest('figure');
-      var c=fig&&fig.querySelector('figcaption')?fig.querySelector('figcaption').textContent:'';
-      open(img.src,img.alt,c);
-    });
-  });
-  document.getElementById('lbclose').addEventListener('click',close);
-  lb.addEventListener('click',function(e){if(e.target===lb)close();});
-  document.addEventListener('keydown',function(e){if(e.key==='Escape')close();});
-})();
-</script>
+<script src="assets/js/site.js" defer></script>
 </body>
 </html>
