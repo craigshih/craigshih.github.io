@@ -110,10 +110,7 @@ a.card:hover{transform:translateY(-3px);box-shadow:var(--shadow)}
 .ico{width:20px;height:20px;flex:none}
 .label .ico{width:15px;height:15px;color:var(--accent)}
 .btn .ico{width:17px;height:17px}
-.badge{width:42px;height:42px;flex:none;border-radius:12px;background:var(--accent-soft);color:var(--accent);
-  display:grid;place-items:center;margin-bottom:14px}
-.badge .ico{width:21px;height:21px}
-.art{width:100%;height:auto;max-height:132px}
+.art{width:100%;height:auto;max-height:150px}
 .small{font-size:14px}
 
 /* 區塊標題 */
@@ -193,9 +190,6 @@ a.stat:hover .src{color:var(--accent)}
 .timeline li:last-child{padding-bottom:0}
 .timeline .when{font-size:13px;color:var(--ink-3);font-variant-numeric:tabular-nums;white-space:nowrap}
 .timeline h3{font-size:16.5px}
-.tl-body{display:flex;gap:14px;align-items:flex-start}
-.tl-body .badge{width:36px;height:36px;border-radius:10px;margin:0}
-.tl-body .badge .ico{width:18px;height:18px}
 .timeline .role{font-size:13.5px;color:var(--accent);font-weight:600;margin-top:2px}
 .timeline .desc{font-size:14px;color:var(--ink-2);margin-top:6px;max-width:44em}
 .timeline .link{font-size:13px;font-weight:600;text-decoration:none;white-space:nowrap;color:var(--ink-2);
@@ -215,15 +209,14 @@ a.stat:hover .src{color:var(--accent)}
 .award p.d{font-size:14px;color:var(--ink-2)}
 
 /* 證照 */
-.cert h3{font-size:16px;margin-bottom:12px}
+.cert h3{font-size:16px;margin-bottom:12px;display:flex;align-items:center;gap:8px}
+.cert h3 .ico{width:16px;height:16px;color:var(--accent)}
 .cert ul{margin:0;padding-left:1.1em;font-size:14px;color:var(--ink-2)}
 .cert li{margin-bottom:6px}
 .cert-thumbs{display:flex;gap:10px;margin-top:18px}
 .cert-thumbs img{width:96px;height:72px;object-fit:contain;background:var(--card-2);border:1px solid var(--line);border-radius:10px;padding:4px;cursor:zoom-in}
 
 /* 聯絡 */
-.contact .deco{position:absolute;right:-24px;top:-24px;width:240px;height:240px;color:var(--inv-ink);opacity:.07;pointer-events:none}
-.contact .deco .ico{width:100%;height:100%;stroke-width:1.2}
 .contact h2{font-size:clamp(28px,4vw,44px);font-weight:900;line-height:1.25}
 .contact .mail{font-size:clamp(18px,2.4vw,26px);font-weight:700;text-decoration:none;border-bottom:2px solid var(--accent);padding-bottom:2px}
 .contact .mail:hover{color:var(--accent)}
