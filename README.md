@@ -20,6 +20,7 @@
 ├── assets/css/site.css   ← 全站樣式（顏色、字體、圓角都在最上面 :root）
 ├── assets/js/site.js     ← 手機選單、捲動進場、圖片燈箱
 ├── assets/img/           ← 圖片（WebP）；portrait.jpg 與 og.jpg 給社群分享預覽用
+├── assets/cv/            ← 一頁履歷 PDF（首頁與聯絡區的「下載履歷」按鈕）
 ├── sitemap.xml / robots.txt
 └── README.md
 ```
@@ -72,3 +73,4 @@
 - 自動跟隨系統的淺色 / 深色模式
 - SEO：每頁獨立 title / description / canonical、Open Graph 分享圖、JSON-LD 個人資料、sitemap
 - 無障礙：「跳到主要內容」連結、鍵盤可操作的燈箱（← → 切換、Esc 關閉）、可見 focus 框、尊重 `prefers-reduced-motion`
+- 圖示：[Lucide](https://lucide.dev)（ISC 授權）以內嵌 SVG 使用；「關於我」與 UX／UI 競賽卡的插圖是自製 SVG，顏色跟著深淺色模式變
