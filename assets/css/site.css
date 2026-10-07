@@ -363,6 +363,8 @@ svg [class^="fx-"],svg [class*=" fx-"]{transform-box:fill-box;transform-origin:c
   box-shadow:0 0 0 5px var(--card);transition:transform .5s cubic-bezier(.3,1.6,.5,1),box-shadow .5s}
 .logo img{width:28px;height:28px;object-fit:contain}
 .logo.dark{background:#16181C;border-color:#16181C}
+.logo.fill{overflow:hidden;border:none}
+.logo.fill img{width:100%;height:100%;object-fit:cover}
 .logo.mono{background:color-mix(in srgb,var(--c) 14%,var(--card));border-color:color-mix(in srgb,var(--c) 30%,transparent);
   color:var(--c);font-weight:900;font-size:19px}
 .tl-item:not(.in) .logo{transform:scale(.6)}
