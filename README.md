@@ -21,6 +21,7 @@
 ├── assets/js/site.js     ← 手機選單、捲動進場、圖片燈箱
 ├── assets/img/           ← 圖片（WebP）；portrait.jpg 與 og.jpg 給社群分享預覽用
 ├── assets/cv/            ← 一頁履歷 PDF（首頁與聯絡區的「下載履歷」按鈕）
+├── assets/logos/         ← 經歷時間軸的品牌 logo（取自各公司官網）
 ├── sitemap.xml / robots.txt
 └── README.md
 ```
@@ -74,3 +75,8 @@
 - SEO：每頁獨立 title / description / canonical、Open Graph 分享圖、JSON-LD 個人資料、sitemap
 - 無障礙：「跳到主要內容」連結、鍵盤可操作的燈箱（← → 切換、Esc 關閉）、可見 focus 框、尊重 `prefers-reduced-motion`
 - 圖示：[Lucide](https://lucide.dev)（ISC 授權）以內嵌 SVG 使用；「關於我」與 UX／UI 競賽卡的插圖是自製 SVG，顏色跟著深淺色模式變
+- 作品封面、競賽插圖：自製動畫 SVG，直接寫在 HTML 裡（`class="cover-art"` / `art-thumb`），動畫用 `site.css` 的 `.fx-*` class
+- 工具圖示：[Simple Icons](https://simpleicons.org)（CC0）品牌圖示；ManyChat 與 Prompt 設計用 Lucide 通用圖示
+- 品牌 logo：Amazon 取自 Simple Icons；On-us、布爾喬亞（VOCAL MIDDLE）、夢想銀號、政大、政大之聲取自各自官網。樂利豐、非我設計、存在音樂找不到官方 logo，用文字徽章代替
+- 動態背景：`.bg-fx`（漂移色塊 + 點陣）、卡片游標光暈、頂部捲動進度條；系統開啟「減少動態效果」時全部停止
+- CSS / JS 連結帶 `?v=` 版本參數（檔案內容雜湊），改完記得更新，避免訪客看到舊樣式

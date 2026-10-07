@@ -13,8 +13,37 @@
     });
   }
 
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  // 卡片游標光暈：把滑鼠位置寫進 --mx / --my
+  if (!reduce && window.matchMedia('(hover: hover)').matches) {
+    document.addEventListener('pointermove', function(e){
+      var card = e.target.closest && e.target.closest('.card');
+      if (!card) return;
+      var r = card.getBoundingClientRect();
+      card.style.setProperty('--mx', (e.clientX - r.left) + 'px');
+      card.style.setProperty('--my', (e.clientY - r.top) + 'px');
+    }, {passive:true});
+  }
+
+  // 頂部捲動進度條 + 經歷時間軸的填色進度
+  var bar = document.querySelector('.progress'), tl = document.querySelector('.tl'), ticking = false;
+  function onScroll(){
+    ticking = false;
+    var h = document.documentElement.scrollHeight - innerHeight;
+    if (bar) bar.style.setProperty('--sp', h > 0 ? (scrollY / h).toFixed(4) : 0);
+    if (tl) {
+      var r = tl.getBoundingClientRect();
+      var p = (innerHeight * 0.6 - r.top) / r.height;
+      tl.style.setProperty('--p', Math.max(0, Math.min(1, p)).toFixed(4));
+    }
+  }
+  addEventListener('scroll', function(){ if (!ticking) { ticking = true; requestAnimationFrame(onScroll); } }, {passive:true});
+  addEventListener('resize', onScroll);
+  onScroll();
+
   // 捲動進場
-  var items = document.querySelectorAll('.reveal');
+  var items = document.querySelectorAll('.reveal, .tl-item');
   if ('IntersectionObserver' in window) {
     var io = new IntersectionObserver(function(entries){
       entries.forEach(function(en){ if (en.isIntersecting) { en.target.classList.add('in'); io.unobserve(en.target); } });
