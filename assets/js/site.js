@@ -26,6 +26,32 @@
     }, {passive:true});
   }
 
+  // 十字準星游標 + 即時座標（X 為畫面座標，Y 為整頁座標）
+  var xh = document.querySelector('.xhair');
+  if (xh && !reduce && window.matchMedia('(hover: hover) and (pointer: fine)').matches) {
+    var lbl = xh.querySelector('.xh-lbl'), mx = 0, my = 0, queued = false;
+    var pad = function(n){ n = Math.max(0, Math.round(n)); return ('0000' + n).slice(-4); };
+    var draw = function(){
+      queued = false;
+      xh.style.setProperty('--x', mx + 'px');
+      xh.style.setProperty('--y', my + 'px');
+      lbl.textContent = 'X ' + pad(mx) + '  Y ' + pad(my + scrollY);
+      xh.classList.toggle('flip-x', mx > innerWidth - 150);
+      xh.classList.toggle('flip-y', my > innerHeight - 44);
+    };
+    var ask = function(){ if (!queued) { queued = true; requestAnimationFrame(draw); } };
+    document.documentElement.classList.add('has-xhair');
+    document.addEventListener('pointermove', function(e){
+      if (e.pointerType !== 'mouse') return;
+      mx = e.clientX; my = e.clientY; xh.classList.add('on'); ask();
+      xh.classList.toggle('hot', !!(e.target.closest && e.target.closest('a,button,[data-lb],.tools li,.traits li')));
+    }, {passive:true});
+    addEventListener('scroll', ask, {passive:true});
+    document.addEventListener('pointerdown', function(){ xh.classList.add('press'); });
+    document.addEventListener('pointerup', function(){ xh.classList.remove('press'); });
+    document.documentElement.addEventListener('mouseleave', function(){ xh.classList.remove('on'); });
+  }
+
   // 頂部捲動進度條 + 經歷時間軸的填色進度
   var bar = document.querySelector('.progress'), tl = document.querySelector('.tl'), ticking = false;
   function onScroll(){

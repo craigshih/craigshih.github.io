@@ -87,6 +87,27 @@ p{margin:0}
 .progress{position:fixed;top:0;left:0;right:0;height:3px;z-index:60;transform-origin:0 50%;transform:scaleX(var(--sp,0));
   background:linear-gradient(90deg,var(--red),var(--yellow))}
 
+/* 游標：十字準星 + 即時座標（只在有滑鼠的裝置） */
+.xhair{position:fixed;inset:0;pointer-events:none;z-index:200;opacity:0;transition:opacity .3s}
+.xhair.on{opacity:1}
+.xh-h,.xh-v{position:absolute;left:0;top:0}
+.xh-h{right:0;height:1px;transform:translateY(var(--y,-10px));
+  background:linear-gradient(90deg,transparent,rgba(255,200,61,.28) 20%,rgba(255,200,61,.28) 80%,transparent)}
+.xh-v{bottom:0;width:1px;transform:translateX(var(--x,-10px));
+  background:linear-gradient(180deg,transparent,rgba(255,200,61,.28) 20%,rgba(255,200,61,.28) 80%,transparent)}
+.xh-dot{position:absolute;left:0;top:0;width:24px;height:24px;margin:-12px 0 0 -12px;border:1.5px solid var(--yellow);border-radius:50%;
+  transform:translate(var(--x,-99px),var(--y,-99px));transition:width .25s,height .25s,margin .25s,border-color .25s,background .25s}
+.xh-dot::after{content:"";position:absolute;left:50%;top:50%;width:4px;height:4px;margin:-2px 0 0 -2px;border-radius:50%;background:var(--red)}
+.xhair.hot .xh-dot{width:46px;height:46px;margin:-23px 0 0 -23px;border-color:var(--red);background:rgba(229,64,43,.12)}
+.xhair.press .xh-dot{width:16px;height:16px;margin:-8px 0 0 -8px}
+.xh-lbl{position:absolute;left:0;top:0;transform:translate(calc(var(--x,-200px) + 18px),calc(var(--y,-200px) + 16px));
+  font-family:var(--mono);font-size:10.5px;letter-spacing:.08em;color:var(--yellow);background:rgba(12,12,13,.85);
+  border:1px solid rgba(255,200,61,.3);padding:2px 7px;border-radius:4px;white-space:nowrap}
+.xhair.flip-x .xh-lbl{transform:translate(calc(var(--x) - 100% - 18px),calc(var(--y) + 16px))}
+.xhair.flip-y .xh-lbl{transform:translate(calc(var(--x) + 18px),calc(var(--y) - 100% - 16px))}
+.xhair.flip-x.flip-y .xh-lbl{transform:translate(calc(var(--x) - 100% - 18px),calc(var(--y) - 100% - 16px))}
+html.has-xhair,html.has-xhair *{cursor:none!important}
+
 /* ---------- Bento 網格與卡片 ---------- */
 .bento{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:var(--gap)}
 .c-3{grid-column:span 3}.c-4{grid-column:span 4}.c-5{grid-column:span 5}.c-6{grid-column:span 6}
@@ -167,6 +188,11 @@ a.card:hover{transform:translateY(-4px);border-color:color-mix(in srgb,var(--red
 .stamp{flex:none;width:clamp(44px,5vw,64px);height:clamp(44px,5vw,64px);margin-top:.4em;border-radius:12px;background:var(--red);color:#fff;
   display:grid;place-items:center;font-size:clamp(24px,2.8vw,36px);font-weight:900;transform:rotate(-8deg);
   box-shadow:0 0 0 3px var(--bg),0 0 0 5px var(--red);animation:stampIn .9s cubic-bezier(.3,1.6,.5,1) .5s both}
+.stamp.chibi{width:clamp(64px,8vw,108px);height:clamp(64px,8vw,108px);margin-top:.12em;border-radius:50%;background:#FFC83D;padding:0;overflow:hidden;
+  box-shadow:0 0 0 4px var(--bg),0 0 0 7px var(--red);transform:rotate(-6deg)}
+.stamp.chibi svg{width:100%;height:100%;display:block}
+.stamp.chibi{animation:stampIn .9s cubic-bezier(.3,1.6,.5,1) .5s both,chibiBob 3.6s ease-in-out 1.6s infinite}
+@keyframes chibiBob{0%,100%{transform:rotate(-6deg) translateY(0)}50%{transform:rotate(4deg) translateY(-6px)}}
 @keyframes stampIn{from{transform:rotate(-30deg) scale(2.4);opacity:0}to{transform:rotate(-8deg) scale(1);opacity:1}}
 .hero-text .small{margin:14px 0 0;line-height:1}
 .hero-text .small.latin{font-family:var(--display);font-weight:700;font-size:clamp(34px,5.4vw,70px);letter-spacing:-.01em;
@@ -250,15 +276,41 @@ a.stat:hover .src{color:var(--red)}
 .browser.paused .b-slide.on,.browser.paused .b-tabs button.on .b-prog{animation-play-state:paused}
 @keyframes bScroll{0%,14%{transform:translateY(0)}100%{transform:translateY(calc(-100% + 100cqh))}}
 @keyframes bProg{to{transform:scaleX(1)}}
+.feature .browser-wrap{flex:1 1 auto;display:flex;flex-direction:column}
+.feature .browser{flex:1 1 auto;display:flex;flex-direction:column}
+.feature .b-view{flex:1 1 auto;min-height:0}
 .b-chip{position:absolute;z-index:3;font-family:var(--mono);font-size:11px;font-weight:700;letter-spacing:.04em;white-space:nowrap;
   background:#111;color:var(--yellow);padding:6px 12px;border-radius:99px;box-shadow:3px 3px 0 var(--red);animation:fxFloat 4.2s ease-in-out infinite}
 .b-chip.c1{top:-14px;right:18px}
 .b-chip.c2{bottom:-14px;left:18px;background:var(--red);color:#fff;box-shadow:3px 3px 0 #111;animation-delay:-2s}
 
 /* 關於我 */
-.about{display:flex;flex-direction:column;gap:16px}
-.about .lead{font-size:17px;font-weight:500;line-height:1.8}
-.about .lead b{color:var(--yellow);font-weight:700}
+.about{display:flex;flex-direction:column;gap:18px}
+.about-title{font-size:clamp(21px,2.2vw,27px);font-weight:900;line-height:1.45;letter-spacing:.01em}
+.about-title em{font-style:normal;color:var(--yellow);white-space:nowrap}
+.motto{margin:0;position:relative;padding:22px 22px 20px;border-radius:var(--radius-sm);background:#0E0E0F;border:1px solid var(--line-2);
+  box-shadow:inset 4px 0 0 var(--red);overflow:hidden}
+.motto-q{position:absolute;right:10px;top:-34px;font-family:var(--display);font-size:150px;line-height:1;color:var(--red);opacity:.22;pointer-events:none}
+.motto-tag{font-family:var(--mono);font-size:11px;letter-spacing:.14em;color:var(--red);margin-bottom:8px}
+.motto blockquote{margin:0;font-size:clamp(17px,1.7vw,20px);font-weight:700;line-height:1.7}
+.motto mark{color:#111;background:linear-gradient(var(--yellow),var(--yellow)) no-repeat 0 85%/0% 100%;padding:0 2px;border-radius:3px;
+  transition:background-size 1s cubic-bezier(.6,0,.2,1) .4s}
+.motto mark + mark,.motto blockquote mark:nth-of-type(2){transition-delay:1s}
+.about.in .motto mark{background-size:100% 100%}
+.about-p{font-size:15px;line-height:1.85}
+.about-p.muted{font-size:14px}
+.traits{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+.traits li{display:flex;flex-direction:column;gap:2px;padding:12px;border-radius:12px;background:var(--card-2);border:1px solid var(--line);
+  transition:transform .3s cubic-bezier(.3,1.6,.5,1),border-color .3s}
+.traits li:hover{transform:translateY(-3px) rotate(-1deg);border-color:var(--yellow)}
+.tr-i{width:30px;height:30px;border-radius:9px;display:grid;place-items:center;background:var(--yellow);color:#111;margin-bottom:6px}
+.traits li:nth-child(2) .tr-i{background:var(--red);color:#fff}
+.traits li:nth-child(3) .tr-i{background:#F4F0E8}
+.tr-i .ico{width:16px;height:16px}
+.traits li:hover .tr-i .ico{animation:fxBob .8s ease-in-out}
+.traits b{font-size:14.5px}
+.traits small{font-size:11.5px;color:var(--ink-3);line-height:1.45}
+@media(max-width:420px){.traits{grid-template-columns:1fr}.traits li{flex-direction:row;align-items:center;gap:10px}.tr-i{margin:0}}
 .about .chips{margin-top:auto}
 .art{width:100%;height:auto;max-height:150px}
 
