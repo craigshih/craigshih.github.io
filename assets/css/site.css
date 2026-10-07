@@ -226,6 +226,35 @@ a.stat:hover .src{color:var(--red)}
 .feature .shot-frame:hover img{transform:scale(1.03)}
 .note{font-size:12.5px;margin-top:10px}
 
+/* 財經站：瀏覽器外框 + 自動輪播頁面 */
+.browser-wrap{position:relative;margin:6px 0 4px}
+.browser{position:relative;border-radius:14px;overflow:hidden;background:#0C0C0D;border:2px solid #111;box-shadow:6px 6px 0 #111}
+.b-bar{display:flex;align-items:center;gap:6px;padding:8px 10px;background:#19191B;border-bottom:1px solid #2A2A2E}
+.b-bar i{width:9px;height:9px;border-radius:50%;background:#E5402B;flex:none}
+.b-bar i:nth-child(2){background:#FFC83D}.b-bar i:nth-child(3){background:#3DDC84}
+.b-url{flex:1;min-width:0;margin:0 6px;font-family:var(--mono);font-size:11px;color:#B8B3A9;background:#0C0C0D;border-radius:99px;
+  padding:3px 12px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.b-url::before{content:"🔒 ";font-size:9px}
+.b-live{flex:none;font-family:var(--mono);font-size:10px;font-weight:700;letter-spacing:.08em;color:#fff;background:var(--red);border-radius:4px;padding:1px 6px;
+  animation:fxBlink 1.6s ease-in-out infinite}
+.b-tabs{display:flex;background:#121214;border-bottom:1px solid #2A2A2E}
+.b-tabs button{all:unset;cursor:pointer;flex:1;text-align:center;font-size:12px;font-weight:700;color:#7F7A72;padding:8px 4px 10px;position:relative;transition:color .3s}
+.b-tabs button:hover{color:#F4F0E8}
+.b-tabs button.on{color:var(--yellow)}
+.b-tabs button:focus-visible{outline:2px solid var(--yellow);outline-offset:-2px}
+.b-prog{position:absolute;left:0;right:0;bottom:0;height:2px;background:var(--yellow);transform:scaleX(0);transform-origin:0 50%}
+.b-tabs button.on .b-prog{animation:bProg 5.2s linear forwards}
+.b-view{display:block;position:relative;aspect-ratio:16/10;overflow:hidden;container-type:size;background:#0C0C0D}
+.b-slide{position:absolute;left:0;top:0;width:100%;height:auto;opacity:0;transition:opacity .7s ease}
+.b-slide.on{opacity:1;animation:bScroll 5.2s cubic-bezier(.45,0,.25,1) forwards}
+.browser.paused .b-slide.on,.browser.paused .b-tabs button.on .b-prog{animation-play-state:paused}
+@keyframes bScroll{0%,14%{transform:translateY(0)}100%{transform:translateY(calc(-100% + 100cqh))}}
+@keyframes bProg{to{transform:scaleX(1)}}
+.b-chip{position:absolute;z-index:3;font-family:var(--mono);font-size:11px;font-weight:700;letter-spacing:.04em;white-space:nowrap;
+  background:#111;color:var(--yellow);padding:6px 12px;border-radius:99px;box-shadow:3px 3px 0 var(--red);animation:fxFloat 4.2s ease-in-out infinite}
+.b-chip.c1{top:-14px;right:18px}
+.b-chip.c2{bottom:-14px;left:18px;background:var(--red);color:#fff;box-shadow:3px 3px 0 #111;animation-delay:-2s}
+
 /* 關於我 */
 .about{display:flex;flex-direction:column;gap:16px}
 .about .lead{font-size:17px;font-weight:500;line-height:1.8}

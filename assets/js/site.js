@@ -62,6 +62,27 @@
     document.querySelectorAll('.stat .n').forEach(function(el){ cio.observe(el); });
   }
 
+  // 財經站瀏覽器框：每 5.2 秒換一頁；滑鼠移入暫停、點分頁可切換、離開畫面就停
+  document.querySelectorAll('[data-cycle]').forEach(function(b){
+    var tabs = b.querySelectorAll('.b-tabs button'), slides = b.querySelectorAll('.b-slide'), i = 0, timer = null;
+    function go(n){
+      i = (n + slides.length) % slides.length;
+      for (var k = 0; k < slides.length; k++) {
+        slides[k].classList.remove('on'); tabs[k].classList.remove('on'); tabs[k].setAttribute('aria-selected', k === i);
+      }
+      void b.offsetWidth;   // 重新觸發 CSS 動畫
+      slides[i].classList.add('on'); tabs[i].classList.add('on');
+    }
+    function stop(){ clearInterval(timer); timer = null; }
+    function start(){ stop(); if (!reduce) timer = setInterval(function(){ go(i + 1); }, 5200); }
+    tabs.forEach(function(t, k){ t.addEventListener('click', function(){ go(k); start(); }); });
+    b.addEventListener('mouseenter', function(){ stop(); b.classList.add('paused'); });
+    b.addEventListener('mouseleave', function(){ b.classList.remove('paused'); start(); });
+    if ('IntersectionObserver' in window) {
+      new IntersectionObserver(function(en){ en[0].isIntersecting ? (go(i), start()) : stop(); }).observe(b);
+    } else { start(); }
+  });
+
   // 捲動進場
   var items = document.querySelectorAll('.reveal, .tl-item');
   if ('IntersectionObserver' in window) {
