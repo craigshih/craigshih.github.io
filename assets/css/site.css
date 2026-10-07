@@ -192,6 +192,7 @@ a.card:hover{transform:translateY(-4px);border-color:color-mix(in srgb,var(--red
   box-shadow:0 0 0 4px var(--bg),0 0 0 7px var(--red);transform:rotate(-6deg)}
 .stamp.chibi svg{width:100%;height:100%;display:block}
 .stamp.chibi{animation:stampIn .9s cubic-bezier(.3,1.6,.5,1) .5s both,chibiBob 3.6s ease-in-out 1.6s infinite}
+@media(max-width:520px){.name{gap:10px}.stamp.chibi{width:54px;height:54px}.name .big.latin{font-size:clamp(38px,11vw,56px)}.name .big.cjk{font-size:clamp(60px,18vw,80px)}}
 @keyframes chibiBob{0%,100%{transform:rotate(-6deg) translateY(0)}50%{transform:rotate(4deg) translateY(-6px)}}
 @keyframes stampIn{from{transform:rotate(-30deg) scale(2.4);opacity:0}to{transform:rotate(-8deg) scale(1);opacity:1}}
 .hero-text .small{margin:14px 0 0;line-height:1}
@@ -460,6 +461,55 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
 .lb .prev{left:14px;top:50%;transform:translateY(-50%)}
 .lb .next{right:14px;top:50%;transform:translateY(-50%)}
 @media(max-width:640px){.lb .prev,.lb .next{top:auto;bottom:14px;transform:none}}
+
+
+/* ---------- 星座背景（點與連線，靠近游標會連過去） ---------- */
+.bg-fx .stars{position:absolute;inset:0;width:100%;height:100%}
+.name .big{text-shadow:0 0 42px rgba(255,200,61,.18),0 0 2px rgba(255,255,255,.25)}
+
+/* ---------- 角落 hashtag 打字機 ---------- */
+.corner-tag{position:fixed;left:18px;bottom:16px;z-index:40;font-family:var(--mono);font-size:11px;letter-spacing:.08em;color:var(--ink-3);
+  pointer-events:none;display:flex;align-items:center;gap:2px}
+.corner-tag span{color:var(--yellow)}
+.corner-tag i{width:7px;height:13px;background:var(--red);animation:fxBlink 1s steps(2) infinite}
+@media(max-width:900px){.corner-tag{display:none}}
+
+/* ---------- 跨界座標 ---------- */
+.xmap{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,1fr);gap:28px;align-items:center;
+  background:radial-gradient(ellipse at 30% 50%,rgba(229,64,43,.08),transparent 60%),var(--card)}
+.xmap-svg{width:100%;height:auto;display:block;overflow:hidden}
+.ring{fill:none;stroke:var(--line-2)}
+.ring.r2{stroke-dasharray:2 8;stroke:color-mix(in srgb,var(--yellow) 40%,transparent)}
+.ring.r3{stroke:rgba(244,240,232,.06)}
+.ring-spin{transform-origin:300px 300px;animation:fxSpin 90s linear infinite}
+.spoke{stroke-width:2;stroke-dasharray:4 6;animation:fxDash 1.4s linear infinite;opacity:.45;transition:opacity .4s}
+.sat line{stroke-width:1;opacity:.35;transition:opacity .4s}
+.sat text{font-size:13px;font-weight:600;fill:var(--ink-2);transition:fill .4s,opacity .4s}
+.sat-dot{transform-box:fill-box;transform-origin:center;animation:fxPulse 3s ease-in-out infinite;transition:opacity .4s}
+.hub{cursor:pointer;outline:none}
+.hub text{font-size:15px;font-weight:900}
+.hub > circle:nth-of-type(2){transition:transform .4s cubic-bezier(.3,1.6,.5,1)}
+.hub-halo{opacity:0;transform-box:fill-box;transform-origin:center;transition:opacity .4s}
+.hub:hover > circle:nth-of-type(2),.hub:focus-visible > circle:nth-of-type(2){transform:scale(1.08)}
+.hub:focus-visible .hub-halo{opacity:.35}
+.xmap[data-active=comm] .hub[data-hub=comm] .hub-halo,.xmap[data-active=tech] .hub[data-hub=tech] .hub-halo,.xmap[data-active=biz] .hub[data-hub=biz] .hub-halo{opacity:.22;animation:fxRingOut 2.4s ease-out infinite}
+.xmap[data-active=comm] .sat:not([data-hub=comm]),.xmap[data-active=tech] .sat:not([data-hub=tech]),.xmap[data-active=biz] .sat:not([data-hub=biz]){opacity:.22}
+.xmap[data-active=comm] .sat[data-hub=comm] text,.xmap[data-active=tech] .sat[data-hub=tech] text,.xmap[data-active=biz] .sat[data-hub=biz] text{fill:var(--ink)}
+.xmap[data-active=comm] .sat[data-hub=comm] line,.xmap[data-active=tech] .sat[data-hub=tech] line,.xmap[data-active=biz] .sat[data-hub=biz] line{opacity:.9}
+.xmap[data-active=comm] .spoke[data-hub=comm],.xmap[data-active=tech] .spoke[data-hub=tech],.xmap[data-active=biz] .spoke[data-hub=biz]{opacity:1}
+.sat{transition:opacity .4s}
+.xmap-panel{min-height:300px}
+.mp{animation:mpIn .5s cubic-bezier(.2,.7,.3,1)}
+@keyframes mpIn{from{opacity:0;transform:translateY(10px)}}
+.mp-en{font-family:var(--mono);font-size:12px;letter-spacing:.16em;font-weight:700}
+.mp h3{font-size:clamp(34px,4vw,52px);font-weight:900;line-height:1.1;margin:6px 0 14px}
+.mp-desc{color:var(--ink-2);font-size:15.5px;line-height:1.85;margin-bottom:18px;max-width:30em}
+.mp-label{font-family:var(--mono);font-size:11px;letter-spacing:.12em;color:var(--ink-3);margin:22px 0 8px;text-transform:uppercase}
+.mp-links{display:flex;flex-direction:column;gap:6px}
+.mp-links a{font-size:14.5px;font-weight:600;text-decoration:none;color:var(--ink);padding:9px 14px;border-radius:12px;background:var(--card-2);
+  border:1px solid var(--line);transition:border-color .25s,transform .25s,color .25s}
+.mp-links a:hover{border-color:var(--yellow);color:var(--yellow);transform:translateX(4px)}
+@media(max-width:860px){.xmap{grid-template-columns:1fr}.xmap-panel{min-height:0}}
 
 /* ---------- 插圖動畫 ---------- */
 svg [class^="fx-"],svg [class*=" fx-"]{transform-box:fill-box;transform-origin:center}

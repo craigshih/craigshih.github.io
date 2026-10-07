@@ -109,6 +109,88 @@
     } else { start(); }
   });
 
+  // 星座背景：點緩慢漂移、彼此靠近就連線；有滑鼠時，游標附近的點會連到游標
+  var cv = document.querySelector('.bg-fx .stars');
+  if (cv && !reduce && cv.getContext) {
+    var ctx = cv.getContext('2d'), dpr = Math.min(2, window.devicePixelRatio || 1), W = 0, H = 0, pts = [];
+    var cur = {x: -999, y: -999}, LINK = 130, PULL = 190, running = true;
+    var COLORS = ['rgba(255,200,61,', 'rgba(229,64,43,', 'rgba(244,240,232,'];
+    var size = function(){
+      W = innerWidth; H = innerHeight;
+      cv.width = W * dpr; cv.height = H * dpr; ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+      var n = Math.round(Math.min(90, W * H / 16000));
+      pts = [];
+      for (var k = 0; k < n; k++) pts.push({x: Math.random() * W, y: Math.random() * H,
+        vx: (Math.random() - .5) * .25, vy: (Math.random() - .5) * .25, r: Math.random() * 1.6 + .6, c: COLORS[k % 3]});
+    };
+    var frame = function(){
+      if (!running) return;
+      ctx.clearRect(0, 0, W, H);
+      for (var a = 0; a < pts.length; a++) {
+        var p = pts[a];
+        p.x += p.vx; p.y += p.vy;
+        if (p.x < 0 || p.x > W) p.vx *= -1;
+        if (p.y < 0 || p.y > H) p.vy *= -1;
+        for (var b = a + 1; b < pts.length; b++) {
+          var q = pts[b], dx = p.x - q.x, dy = p.y - q.y, d = dx * dx + dy * dy;
+          if (d < LINK * LINK) {
+            ctx.strokeStyle = 'rgba(244,240,232,' + (0.09 * (1 - Math.sqrt(d) / LINK)).toFixed(3) + ')';
+            ctx.lineWidth = 1; ctx.beginPath(); ctx.moveTo(p.x, p.y); ctx.lineTo(q.x, q.y); ctx.stroke();
+          }
+        }
+        var cx = p.x - cur.x, cy = p.y - cur.y, cd = Math.sqrt(cx * cx + cy * cy);
+        if (cd < PULL) {
+          ctx.strokeStyle = 'rgba(255,200,61,' + (0.45 * (1 - cd / PULL)).toFixed(3) + ')';
+          ctx.beginPath(); ctx.moveTo(p.x, p.y); ctx.lineTo(cur.x, cur.y); ctx.stroke();
+          p.x -= cx * .004; p.y -= cy * .004;
+        }
+        ctx.fillStyle = p.c + (cd < PULL ? .95 : .6) + ')';
+        ctx.beginPath(); ctx.arc(p.x, p.y, p.r, 0, 6.283); ctx.fill();
+      }
+      requestAnimationFrame(frame);
+    };
+    size(); addEventListener('resize', size);
+    document.addEventListener('pointermove', function(e){ if (e.pointerType === 'mouse') { cur.x = e.clientX; cur.y = e.clientY; } }, {passive:true});
+    document.documentElement.addEventListener('mouseleave', function(){ cur.x = cur.y = -999; });
+    document.addEventListener('visibilitychange', function(){ running = !document.hidden; if (running) requestAnimationFrame(frame); });
+    requestAnimationFrame(frame);
+  }
+
+  // 跨界座標：點星球切換說明；沒互動時每 5 秒自動輪播
+  document.querySelectorAll('.xmap').forEach(function(m){
+    var hubs = m.querySelectorAll('.hub'), panels = m.querySelectorAll('.mp'), keys = [], auto = null;
+    hubs.forEach(function(h){ keys.push(h.getAttribute('data-hub')); });
+    function show(k){
+      m.setAttribute('data-active', k);
+      panels.forEach(function(p){ p.hidden = p.getAttribute('data-hub') !== k; });
+    }
+    function stopAuto(){ clearInterval(auto); auto = null; }
+    hubs.forEach(function(h){
+      var k = h.getAttribute('data-hub');
+      h.addEventListener('click', function(){ stopAuto(); show(k); });
+      h.addEventListener('keydown', function(e){ if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); stopAuto(); show(k); } });
+      h.addEventListener('mouseenter', function(){ stopAuto(); show(k); });
+    });
+    if (!reduce) auto = setInterval(function(){
+      show(keys[(keys.indexOf(m.getAttribute('data-active')) + 1) % keys.length]);
+    }, 5000);
+  });
+
+  // 角落 hashtag：打字機輪播
+  var tagBox = document.querySelector('.corner-tag');
+  if (tagBox && !reduce) {
+    var tags = JSON.parse(tagBox.getAttribute('data-tags')), span = tagBox.querySelector('span'), ti = 0, ci = tags[0].length, dir = -1;
+    var tick = function(){
+      ci += dir;
+      span.textContent = tags[ti].slice(0, Math.max(0, ci));
+      var wait = dir < 0 ? 45 : 90;
+      if (dir < 0 && ci <= 0) { ti = (ti + 1) % tags.length; dir = 1; wait = 300; }
+      else if (dir > 0 && ci >= tags[ti].length) { dir = -1; wait = 2600; }
+      setTimeout(tick, wait);
+    };
+    setTimeout(tick, 2600);
+  }
+
   // 捲動進場
   var items = document.querySelectorAll('.reveal, .tl-item');
   if ('IntersectionObserver' in window) {

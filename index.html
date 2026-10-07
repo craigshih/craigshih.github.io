@@ -21,12 +21,12 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&family=Noto+Sans+TC:wght@400;500;700;900&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/css/site.css?v=f83f4b47">
+<link rel="stylesheet" href="assets/css/site.css?v=d7842f74">
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Person", "name": "施宥丞", "alternateName": ["Craig Shih", "Yu Cheng Shih"], "url": "https://craigshih.github.io/", "image": "https://craigshih.github.io/assets/img/portrait.jpg", "email": "mailto:craigshih1206@gmail.com", "jobTitle": "金融科技 / 跨境電商 / 科技行銷", "alumniOf": {"@type": "CollegeOrUniversity", "name": "National Chengchi University"}, "sameAs": ["https://www.linkedin.com/in/craig-shih-951121338/", "https://github.com/craigshih", "https://craig-finance.pages.dev/"]}</script>
 </head>
 <body>
 <a class="skip" href="#main">跳到主要內容</a>
-<div class="bg-fx" aria-hidden="true"><span></span><span></span><span></span></div>
+<div class="bg-fx" aria-hidden="true"><span></span><span></span><span></span><canvas class="stars"></canvas></div>
 <div class="progress" aria-hidden="true"></div>
 <div class="xhair" aria-hidden="true"><i class="xh-h"></i><i class="xh-v"></i><b class="xh-dot"></b><span class="xh-lbl"></span></div>
 <header class="topbar">
@@ -141,6 +141,59 @@
         <p class="about-p muted">這份好奇心，把我從廣告與廣播一路帶往科技與商業。我發現真正難的，是讓一個聽不懂技術的市場，願意相信一個新的金融或電商產品——於是我在金融科技新創經營社群、為銀行與交易所做公關策略、替香港 FinTech 打開台灣市場、在亞馬遜做跨境電商，同時自學 Google Cloud、生成式 AI、區塊鏈與 Python。</p>
         <ul class="chips"><li>政大 廣告系（2025 畢業）</li><li>外交系 輔系</li><li>政大 科智所（在學）</li><li>TOEIC 895</li><li>IELTS 7.0</li></ul>
       </div>
+    </div>
+  </section>
+
+  <section class="wrap sec" id="map">
+    <div class="sec-head">
+      <span class="num">00</span>
+      <h2>跨界座標<small>CROSSOVER MAP</small></h2>
+      <p>傳播、科技、商業三個面向，以及它們在我的專案裡交會的地方。點任一顆星球看看。</p>
+    </div>
+    <div class="bento">
+    <div class="card xmap c-12 reveal" data-active="comm">
+      <div class="xmap-stage">
+        <svg class="xmap-svg" viewBox="-70 -10 740 620" role="img" aria-label="跨界座標">
+          <defs><clipPath id="xmap-center"><circle cx="300" cy="300" r="46"/></clipPath></defs>
+          <circle class="ring r1" cx="300" cy="300" r="120"/>
+          <g class="ring-spin"><circle class="ring r2" cx="300" cy="300" r="225"/></g>
+          <circle class="ring r3" cx="300" cy="300" r="285"/>
+          <line class="spoke" data-hub="comm" x1="300" y1="300" x2="300.0" y2="180.0" stroke="#E5402B"/><line class="spoke" data-hub="tech" x1="300" y1="300" x2="403.9" y2="360.0" stroke="#FFC83D"/><line class="spoke" data-hub="biz" x1="300" y1="300" x2="196.1" y2="360.0" stroke="#F4F0E8"/>
+          <g class="sat" data-hub="comm"><line x1="300.0" y1="180.0" x2="155.4" y2="127.6" stroke="#E5402B"/><circle class="sat-dot" style="animation-delay:0.00s" cx="155.4" cy="127.6" r="5" fill="#E5402B"/><text x="143.2" y="117.1" text-anchor="end">廣告企劃</text></g><g class="sat" data-hub="comm"><line x1="300.0" y1="180.0" x2="245.6" y2="81.7" stroke="#E5402B"/><circle class="sat-dot" style="animation-delay:-0.45s" cx="245.6" cy="81.7" r="5" fill="#E5402B"/><text x="241.0" y="55.2" text-anchor="middle">廣播主持</text></g><g class="sat" data-hub="comm"><line x1="300.0" y1="180.0" x2="354.4" y2="81.7" stroke="#E5402B"/><circle class="sat-dot" style="animation-delay:-0.90s" cx="354.4" cy="81.7" r="5" fill="#E5402B"/><text x="359.0" y="55.2" text-anchor="middle">社群經營</text></g><g class="sat" data-hub="comm"><line x1="300.0" y1="180.0" x2="444.6" y2="127.6" stroke="#E5402B"/><circle class="sat-dot" style="animation-delay:-1.35s" cx="444.6" cy="127.6" r="5" fill="#E5402B"/><text x="456.8" y="117.1" text-anchor="start">公關策略</text></g><g class="sat" data-hub="tech"><line x1="403.9" y1="360.0" x2="521.6" y2="260.9" stroke="#FFC83D"/><circle class="sat-dot" style="animation-delay:-1.80s" cx="521.6" cy="260.9" r="5" fill="#FFC83D"/><text x="540.3" y="261.6" text-anchor="start">生成式 AI</text></g><g class="sat" data-hub="tech"><line x1="403.9" y1="360.0" x2="516.3" y2="362.0" stroke="#FFC83D"/><circle class="sat-dot" style="animation-delay:-2.25s" cx="516.3" cy="362.0" r="5" fill="#FFC83D"/><text x="534.5" y="371.3" text-anchor="start">Google Cloud</text></g><g class="sat" data-hub="tech"><line x1="403.9" y1="360.0" x2="461.9" y2="456.3" stroke="#FFC83D"/><circle class="sat-dot" style="animation-delay:-2.70s" cx="461.9" cy="456.3" r="5" fill="#FFC83D"/><text x="475.5" y="473.5" text-anchor="start">區塊鏈</text></g><g class="sat" data-hub="tech"><line x1="403.9" y1="360.0" x2="377.0" y2="511.4" stroke="#FFC83D"/><circle class="sat-dot" style="animation-delay:-3.15s" cx="377.0" cy="511.4" r="5" fill="#FFC83D"/><text x="383.5" y="533.3" text-anchor="start">Python</text></g><g class="sat" data-hub="biz"><line x1="196.1" y1="360.0" x2="223.0" y2="511.4" stroke="#F4F0E8"/><circle class="sat-dot" style="animation-delay:-3.60s" cx="223.0" cy="511.4" r="5" fill="#F4F0E8"/><text x="216.5" y="533.3" text-anchor="end">跨境電商</text></g><g class="sat" data-hub="biz"><line x1="196.1" y1="360.0" x2="138.1" y2="456.3" stroke="#F4F0E8"/><circle class="sat-dot" style="animation-delay:-4.05s" cx="138.1" cy="456.3" r="5" fill="#F4F0E8"/><text x="124.5" y="473.5" text-anchor="end">金融科技</text></g><g class="sat" data-hub="biz"><line x1="196.1" y1="360.0" x2="83.7" y2="362.0" stroke="#F4F0E8"/><circle class="sat-dot" style="animation-delay:-4.50s" cx="83.7" cy="362.0" r="5" fill="#F4F0E8"/><text x="65.5" y="371.3" text-anchor="end">市場進入</text></g><g class="sat" data-hub="biz"><line x1="196.1" y1="360.0" x2="78.4" y2="260.9" stroke="#F4F0E8"/><circle class="sat-dot" style="animation-delay:-4.95s" cx="78.4" cy="260.9" r="5" fill="#F4F0E8"/><text x="59.7" y="261.6" text-anchor="end">專案管理</text></g>
+          <circle cx="300" cy="300" r="52" fill="#0C0C0D" stroke="#FFC83D" stroke-width="2"/>
+          <g clip-path="url(#xmap-center)"><svg x="254" y="254" width="92" height="92" viewBox="20 12 110 110" aria-hidden="true">
+  <defs><clipPath id="chibi-map"><circle cx="75" cy="78" r="70"/></clipPath></defs>
+  <circle cx="75" cy="78" r="70" fill="#FFC83D"/>
+  <g clip-path="url(#chibi-map)">
+    <path d="M32 92C24 50 44 16 75 16s51 34 43 76c-4 4-10 2-12-4H44c-2 6-8 8-12 4Z" fill="#2A2421"/>
+    <path d="M30 160c0-30 20-46 45-46s45 16 45 46Z" fill="#3B3F46"/>
+    <path d="M62 114 75 136 88 114Z" fill="#17181B"/>
+    <path d="M62 114 71 133 59 139 54 119ZM88 114 79 133 91 139 96 119Z" fill="#2E3238"/>
+    <rect x="68" y="96" width="14" height="20" rx="6" fill="#E8BEA4"/>
+    <circle cx="40" cy="73" r="7" fill="#F5D3BD"/>
+    <circle cx="110" cy="73" r="7" fill="#F5D3BD"/>
+    <circle cx="111.5" cy="80" r="2.2" fill="#C9CDD3"/>
+    <ellipse cx="75" cy="68" rx="35" ry="33" fill="#F7DAC6"/>
+    <path d="M37 60C38 34 55 21 75 21s37 13 38 39c-7-6-15-8-24-8-6-1-11-4-14-10-3 6-8 9-14 10-9 0-17 2-24 8Z" fill="#2A2421"/>
+    <path d="M37 59c-2 6 0 12 3 16 1-8 5-13 10-17ZM113 59c2 6 0 12-3 16-1-8-5-13-10-17Z" fill="#2A2421"/>
+    <path d="M73 30c-5 9-12 16-22 19M77 30c5 9 12 16 22 19M69 25c-10 2-19 8-25 17M81 25c10 2 19 8 25 17" fill="none" stroke="#E7CF9F" stroke-width="3.4" stroke-linecap="round"/>
+    <circle cx="61" cy="72" r="10.5" fill="#FFFFFF" fill-opacity=".35" stroke="#17181B" stroke-width="3.4"/>
+    <circle cx="89" cy="72" r="10.5" fill="#FFFFFF" fill-opacity=".35" stroke="#17181B" stroke-width="3.4"/>
+    <path d="M71.5 71q3.5-3 7 0M50.5 70 42 68M99.5 70l8.5-2" fill="none" stroke="#17181B" stroke-width="3" stroke-linecap="round"/>
+    <path d="M56 74q5-6 10 0M84 74q5-6 10 0" fill="none" stroke="#2A2421" stroke-width="2.6" stroke-linecap="round"/>
+    <ellipse cx="51" cy="86" rx="6" ry="3.4" fill="#F09A8A" opacity=".55"/>
+    <ellipse cx="99" cy="86" rx="6" ry="3.4" fill="#F09A8A" opacity=".55"/>
+    <path d="M65 86h20q-1 12-10 12t-10-12Z" fill="#7A2E2A"/>
+    <rect x="66.5" y="86" width="17" height="4" rx="1.5" fill="#FFFFFF"/>
+  </g>
+</svg></g>
+          <g class="hub" data-hub="comm" tabindex="0" role="button" aria-label="傳播 COMMUNICATION" transform="translate(300.0 180.0)"><circle class="hub-halo" r="44" fill="#E5402B"/><circle r="34" fill="#E5402B"/><text y="6" text-anchor="middle" fill="#fff">傳播</text></g><g class="hub" data-hub="tech" tabindex="0" role="button" aria-label="科技 TECHNOLOGY" transform="translate(403.9 360.0)"><circle class="hub-halo" r="44" fill="#FFC83D"/><circle r="34" fill="#FFC83D"/><text y="6" text-anchor="middle" fill="#111">科技</text></g><g class="hub" data-hub="biz" tabindex="0" role="button" aria-label="商業 BUSINESS" transform="translate(196.1 360.0)"><circle class="hub-halo" r="44" fill="#F4F0E8"/><circle r="34" fill="#F4F0E8"/><text y="6" text-anchor="middle" fill="#111">商業</text></g>
+        </svg>
+      </div>
+      <div class="xmap-panel">
+        <div class="mp" data-hub="comm"><p class="mp-en" style="color:#E5402B">COMMUNICATION</p><h3>傳播</h3><p class="mp-desc">廣告系出身、做了三年廣播：我知道怎麼讓人願意聽完、看完，然後記住。</p><ul class="chips"><li>廣告企劃</li><li>廣播主持</li><li>社群經營</li><li>公關策略</li></ul><p class="mp-label">相關案例</p><div class="mp-links"><a href="work/radio.html">想見鬼想見鬼想見鬼 →</a><a href="work/dreamloan.html">夢想銀號 四平台社群從零建立 →</a><a href="work/bourgeois.html">布爾喬亞 金融科技客戶策略 →</a></div></div><div class="mp" data-hub="tech" hidden><p class="mp-en" style="color:#FFC83D">TECHNOLOGY</p><h3>科技</h3><p class="mp-desc">課餘自學補上的底層能力，讓我能跟工程師、跟 AI 一起把東西真的做出來。</p><ul class="chips"><li>生成式 AI</li><li>Google Cloud</li><li>區塊鏈</li><li>Python</li></ul><p class="mp-label">相關案例</p><div class="mp-links"><a href="work/finance-hub.html">Craig 財經站 →</a><a href="work/amazon-social.html">亞馬遜全球開店 社群全棧運營 →</a><a href="work/onus.html">On-us 台灣市場 0 到 1 →</a></div></div><div class="mp" data-hub="biz" hidden><p class="mp-en" style="color:#F4F0E8">BUSINESS</p><h3>商業</h3><p class="mp-desc">最後都要回到數字：報名轉化、贊助回報、市場進入，成果要能被驗證。</p><ul class="chips"><li>跨境電商</li><li>金融科技</li><li>市場進入</li><li>專案管理</li></ul><p class="mp-label">相關案例</p><div class="mp-links"><a href="work/amazon-campus.html">亞馬遜跨境電商人才培育計畫 →</a><a href="work/bm7.html">Bm7 詞曲創作大賽 →</a><a href="work/onus.html">On-us 台灣市場 0 到 1 →</a></div></div>
+      </div>
+    </div>
     </div>
   </section>
 
@@ -690,6 +743,7 @@
   <figure><img src="" alt=""><figcaption></figcaption></figure>
   <button class="next" aria-label="下一張">→</button>
 </div>
-<script src="assets/js/site.js?v=f83f4b47" defer></script>
+<div class="corner-tag" aria-hidden="true" data-tags="[&quot;#跨域轉譯家&quot;, &quot;#從零到落地&quot;, &quot;#FinTech研究生&quot;, &quot;#跨界科學家&quot;]"><span>#跨域轉譯家</span><i></i></div>
+<script src="assets/js/site.js?v=d7842f74" defer></script>
 </body>
 </html>
