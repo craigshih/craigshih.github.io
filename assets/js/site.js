@@ -42,6 +42,26 @@
   addEventListener('resize', onScroll);
   onScroll();
 
+  // 數字卡：進入畫面時從 0 跑到目標值（只動第一個純數字的文字節點）
+  function countUp(el){
+    var t = el.firstChild;
+    if (!t || t.nodeType !== 3 || !/^\d+(\.\d+)?$/.test(t.nodeValue.trim())) return;
+    var end = parseFloat(t.nodeValue), dec = (t.nodeValue.split('.')[1] || '').length, t0 = null;
+    function step(ts){
+      if (t0 === null) t0 = ts;
+      var k = Math.min(1, (ts - t0) / 1400), e = 1 - Math.pow(1 - k, 3);
+      t.nodeValue = (end * e).toFixed(dec);
+      if (k < 1) requestAnimationFrame(step);
+    }
+    requestAnimationFrame(step);
+  }
+  if (!reduce && 'IntersectionObserver' in window) {
+    var cio = new IntersectionObserver(function(entries){
+      entries.forEach(function(en){ if (en.isIntersecting) { countUp(en.target); cio.unobserve(en.target); } });
+    }, {threshold:.6});
+    document.querySelectorAll('.stat .n').forEach(function(el){ cio.observe(el); });
+  }
+
   // 捲動進場
   var items = document.querySelectorAll('.reveal, .tl-item');
   if ('IntersectionObserver' in window) {

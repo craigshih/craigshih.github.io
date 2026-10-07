@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://craigshih.github.io/</loc></url>
+  <url><loc>https://craigshih.github.io/en/</loc></url>
   <url><loc>https://craigshih.github.io/work/amazon-campus.html</loc></url>
   <url><loc>https://craigshih.github.io/work/amazon-social.html</loc></url>
   <url><loc>https://craigshih.github.io/work/onus.html</loc></url>
@@ -9,4 +10,12 @@
   <url><loc>https://craigshih.github.io/work/bm7.html</loc></url>
   <url><loc>https://craigshih.github.io/work/radio.html</loc></url>
   <url><loc>https://craigshih.github.io/work/finance-hub.html</loc></url>
+  <url><loc>https://craigshih.github.io/en/work/amazon-campus.html</loc></url>
+  <url><loc>https://craigshih.github.io/en/work/amazon-social.html</loc></url>
+  <url><loc>https://craigshih.github.io/en/work/onus.html</loc></url>
+  <url><loc>https://craigshih.github.io/en/work/dreamloan.html</loc></url>
+  <url><loc>https://craigshih.github.io/en/work/bourgeois.html</loc></url>
+  <url><loc>https://craigshih.github.io/en/work/bm7.html</loc></url>
+  <url><loc>https://craigshih.github.io/en/work/radio.html</loc></url>
+  <url><loc>https://craigshih.github.io/en/work/finance-hub.html</loc></url>
 </urlset>

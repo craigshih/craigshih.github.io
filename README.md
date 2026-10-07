@@ -8,6 +8,7 @@
 ```
 .
 ├── index.html            ← 首頁（Bento 卡片版面：自介、數字、精選作品、經歷、競賽、能力、聯絡）
+├── en/                   ← 英文版（index.html + en/work/ 八個案例頁），右上角 中文 / EN 切換
 ├── work/                 ← 每個案例一頁，可以單獨分享連結
 │   ├── amazon-campus.html   01 亞馬遜跨境電商人才培育計畫
 │   ├── amazon-social.html   02 亞馬遜全球開店 社群全棧運營
@@ -17,7 +18,7 @@
 │   ├── bm7.html             06 Bm7 詞曲創作大賽
 │   ├── radio.html           07 想見鬼想見鬼想見鬼
 │   └── finance-hub.html     08 Craig 財經站
-├── assets/css/site.css   ← 全站樣式（顏色、字體、圓角都在最上面 :root）
+├── assets/css/site.css   ← 全站樣式（紅・黑・黃；顏色、字體、圓角都在最上面 :root）
 ├── assets/js/site.js     ← 手機選單、捲動進場、圖片燈箱
 ├── assets/img/           ← 圖片（WebP）；portrait.jpg 與 og.jpg 給社群分享預覽用
 ├── assets/cv/            ← 一頁履歷 PDF（首頁與聯絡區的「下載履歷」按鈕）
@@ -80,3 +81,6 @@
 - 品牌 logo：Amazon 取自 Simple Icons；On-us、布爾喬亞（VOCAL MIDDLE）、夢想銀號、政大、政大之聲取自各自官網。樂利豐、非我設計、存在音樂找不到官方 logo，用文字徽章代替
 - 動態背景：`.bg-fx`（漂移色塊 + 點陣）、卡片游標光暈、頂部捲動進度條；系統開啟「減少動態效果」時全部停止
 - CSS / JS 連結帶 `?v=` 版本參數（檔案內容雜湊），改完記得更新，避免訪客看到舊樣式
+- 中英雙語：中文在 `/`，英文在 `/en/`，每頁都有 hreflang 互相指向。改中文內容時，記得同步改 `en/` 底下對應的檔案
+- 首屏：大字姓名＋印章動畫、旋轉的 OPEN TO WORK 徽章、股價看板跑馬燈（台股紅漲 ▲）、數字卡進場時從 0 跑到目標值
+- 配色只有深色版（紅 #E5402B、黃 #FFC83D、黑 #0C0C0D）
