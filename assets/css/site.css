@@ -113,7 +113,7 @@ html.has-xhair,html.has-xhair *{cursor:none!important}
 .c-3{grid-column:span 3}.c-4{grid-column:span 4}.c-5{grid-column:span 5}.c-6{grid-column:span 6}
 .c-7{grid-column:span 7}.c-8{grid-column:span 8}.c-12{grid-column:span 12}
 @media(max-width:980px){.c-3,.c-4,.c-5,.c-6{grid-column:span 6}.c-7,.c-8{grid-column:span 12}}
-@media(max-width:640px){.c-4,.c-5,.c-6,.c-7,.c-8{grid-column:span 12}}
+@media(max-width:640px){.c-3,.c-4,.c-5,.c-6,.c-7,.c-8{grid-column:span 12}}
 
 .card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
   padding:24px;position:relative;overflow:hidden;overflow:clip;min-width:0}
@@ -553,6 +553,16 @@ svg [class^="fx-"],svg [class*=" fx-"]{transform-box:fill-box;transform-origin:c
 @keyframes fxRing{0%{stroke-dashoffset:277}60%,100%{stroke-dashoffset:37}}
 @keyframes fxDash{to{stroke-dashoffset:-24}}
 @keyframes fxRingOut{0%{transform:scale(1);opacity:.35}100%{transform:scale(1.7);opacity:0}}
+
+/* ---------- 依螢幕大小自動調整 ----------
+   筆電以下維持原本 1200px；大螢幕放寬內容區，讓 Bento 卡片、作品、圖庫攤開；
+   超大螢幕（家用大螢幕、電視）再把內容等比例放大，坐遠也看得清楚。
+   只放大頂欄、內容、頁尾，背景星座、十字準星、燈箱維持原尺寸，游標才對得準。 */
+@media(min-width:1440px){:root{--wrap:1320px}}
+@media(min-width:1680px){:root{--wrap:1440px}}
+@media(min-width:1900px){.topbar,main,footer,.corner-tag{zoom:1.1}:root{--wrap:1480px}.lb img{max-width:min(1600px,92vw);max-height:84vh}}
+@media(min-width:2400px){.topbar,main,footer,.corner-tag{zoom:1.25}:root{--wrap:1600px}}
+@media(min-width:3200px){.topbar,main,footer,.corner-tag{zoom:1.6}}
 
 /* ---------- 進場動畫 ---------- */
 .reveal{opacity:0;transform:translateY(18px);transition:opacity .7s cubic-bezier(.2,.7,.3,1),transform .7s cubic-bezier(.2,.7,.3,1)}

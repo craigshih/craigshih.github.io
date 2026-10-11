@@ -20,9 +20,9 @@
     document.addEventListener('pointermove', function(e){
       var card = e.target.closest && e.target.closest('.card');
       if (!card) return;
-      var r = card.getBoundingClientRect();
-      card.style.setProperty('--mx', (e.clientX - r.left) + 'px');
-      card.style.setProperty('--my', (e.clientY - r.top) + 'px');
+      var r = card.getBoundingClientRect(), z = card.currentCSSZoom || 1; // 大螢幕內容有放大，座標要換回卡片自己的單位
+      card.style.setProperty('--mx', (e.clientX - r.left) / z + 'px');
+      card.style.setProperty('--my', (e.clientY - r.top) / z + 'px');
     }, {passive:true});
   }
 
