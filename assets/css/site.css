@@ -341,6 +341,10 @@ a.stat:hover .src{color:var(--red)}
 .logo img{width:28px;height:28px;object-fit:contain}
 .logo.dark{background:#000;border-color:#333}
 .logo.fill{overflow:hidden;border:none}
+.logo.lab{background:var(--yellow);border-color:var(--yellow);color:#111}
+.logo.lab svg{width:24px;height:24px}
+.tl-card .now{display:inline-block;margin-left:10px;vertical-align:middle;font-family:var(--mono);font-size:10px;font-weight:700;letter-spacing:.1em;
+  color:#fff;background:var(--red);border-radius:4px;padding:1px 6px;animation:fxBlink 1.6s ease-in-out infinite}
 .logo.fill img{width:100%;height:100%;object-fit:cover}
 .tl-item:not(.in) .logo{transform:scale(.6)}
 .tl-item.in .logo{box-shadow:0 0 0 5px var(--card),0 0 0 7px color-mix(in srgb,var(--yellow) 45%,transparent)}
